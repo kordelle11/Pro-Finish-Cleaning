@@ -1,45 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ProFinish Cleaning</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional end of tenancy, deep cleaning, after-build and commercial cleaning in London." />
   <style>
-    body { font-family: Arial; margin: 0; background: #f5f5f5; }
-    header { background: #111; color: white; padding: 20px; text-align: center; }
-    section { padding: 40px; text-align: center; }
-    .btn { background: #25D366; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; }
-    .services { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    .card { background: white; padding: 20px; border-radius: 10px; width: 250px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #2b2b2b);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #111;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .about, .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .contact-box {
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
+
+    .contact-box a {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        margin: 10px auto;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>ProFinish Cleaning</h1>
-  <p>Professional End of Tenancy & Deep Cleaning</p>
-</header>
+  <header>
+    <h1>ProFinish Cleaning</h1>
+    <p>Professional end of tenancy, deep cleaning, after-build and commercial cleaning services in London.</p>
+    <a class="btn" href="https://wa.me/447762397938">Message on WhatsApp</a>
+    <a class="btn secondary" href="tel:07762397938">Call 07762 397938</a>
+  </header>
 
-<section>
-  <h2>Reliable. Fast. Professional.</h2>
-  <p>We help landlords, agents & builders get properties spotless and ready.</p>
-  <a class="btn" href="https://wa.me/447762397938">Message on WhatsApp</a>
-</section>
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>End of Tenancy Cleaning</h3>
+        <p>Detailed cleans for tenants, landlords and letting agents with a professional finish.</p>
+      </div>
+      <div class="card">
+        <h3>Deep Cleaning</h3>
+        <p>Full property deep cleans for kitchens, bathrooms, living spaces and more.</p>
+      </div>
+      <div class="card">
+        <h3>After Build Cleaning</h3>
+        <p>Post-construction and renovation cleaning to remove dust, debris and residue.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Cleaning</h3>
+        <p>Reliable cleaning for offices, businesses, managed properties and communal areas.</p>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">End of Tenancy Cleaning</div>
-    <div class="card">Post-Construction Cleaning</div>
-    <div class="card">Deep Cleaning</div>
-  </div>
-</section>
+  <section>
+    <div class="about">
+      <h2>Why Choose Us</h2>
+      <p>At ProFinish Cleaning, we focus on reliable service, high standards and professional results. Whether you need a one-off deep clean or regular commercial support, we aim to leave every property spotless and ready.</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Contact Us</h2>
-  <p>📞 07762397938</p>
-  <p>Available across London</p>
-</section>
+  <section>
+    <div class="contact-box">
+      <h2>Get a Free Quote</h2>
+      <p><strong>Phone:</strong> <a href="tel:07762397938">07762 397938</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/447762397938">Click here to message us</a></p>
+      <p><strong>Service Area:</strong> London</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 ProFinish Cleaning. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
