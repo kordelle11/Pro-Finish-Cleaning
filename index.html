@@ -1,686 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProFinish Cleaning | End of Tenancy, Deep & Commercial Cleaning London</title>
-  <meta name="description" content="Professional end of tenancy, deep cleaning, after-build and commercial cleaning in London. Fast response, free quotes, reliable service." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProFinish Cleaning London</title>
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1a1a1a;
-      line-height: 1.6;
+      margin: 0;
+      background: #f7f7f7;
+      color: #111;
     }
 
-    a {
-      text-decoration: none;
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    .topbar {
-      background: #111;
-      color: white;
-      font-size: 0.95rem;
-      padding: 12px 0;
-    }
-
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+    h1 {
+      margin: 0;
+      font-size: 28px;
     }
 
     .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-      color: white;
-      padding: 90px 0 80px;
-    }
-
-    .hero-content {
-      max-width: 760px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 8px 14px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-      font-size: 0.92rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 680px;
-      margin-bottom: 28px;
-      color: #f1f1f1;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: #25D366;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.92;
-    }
-
-    .btn-secondary {
-      background: white;
-      color: #111;
-    }
-
-    .btn-dark {
-      background: #111;
-      color: white;
-    }
-
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .hero-points span {
-      background: rgba(255,255,255,0.12);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
+      padding: 30px;
       text-align: center;
-      margin-bottom: 14px;
-      font-size: 2.2rem;
-      color: #111;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 36px;
-      color: #5b6470;
-    }
-
-    .trust-grid,
-    .services-grid,
-    .gallery-grid,
-    .areas-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .trust-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .gallery-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .areas-grid {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    }
-
-    .card,
-    .trust-card,
-    .area-card,
-    .quote-box,
-    .about-box,
-    .before-after-box {
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-    }
-
-    .trust-card,
-    .card,
-    .area-card {
-      padding: 26px;
-    }
-
-    .trust-card h3,
-    .card h3 {
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .trust-card p,
-    .card p,
-    .area-card {
-      color: #5b6470;
-    }
-
-    .service-icon,
-    .trust-icon {
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    .gallery-card {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-    }
-
-    .gallery-card .gallery-text {
-      padding: 18px;
-    }
-
-    .gallery-card h3 {
-      margin-bottom: 8px;
-    }
-
-    .before-after-box {
-      padding: 26px;
-    }
-
-    .before-after-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .before,
-    .after {
-      background: #f7f9fc;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #e8edf3;
-    }
-
-    .before img,
-    .after img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .label {
-      display: inline-block;
-      margin: 16px 16px 8px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 0.85rem;
-    }
-
-    .label.before-label {
-      background: #ffe5e5;
-      color: #b42318;
-    }
-
-    .label.after-label {
-      background: #e7f8ec;
-      color: #18794e;
-    }
-
-    .before p,
-    .after p {
-      padding: 0 16px 18px;
-      color: #5b6470;
-    }
-
-    .about-box {
-      padding: 34px;
-    }
-
-    .about-box p {
-      color: #5b6470;
-      margin-bottom: 14px;
-    }
-
-    .areas-grid .area-card {
-      text-align: center;
-      font-weight: bold;
-      color: #111;
-    }
-
-    .quote-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .quote-box,
-    .contact-side {
-      padding: 28px;
-    }
-
-    .quote-box h3,
-    .contact-side h3 {
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-    }
-
-    .quote-box p,
-    .contact-side p {
-      color: #5b6470;
-      margin-bottom: 18px;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 14px 14px;
-      border: 1px solid #d7dee8;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-family: Arial, sans-serif;
       background: #fff;
     }
 
-    textarea {
-      min-height: 130px;
-      resize: vertical;
+    .hero h2 {
+      font-size: 22px;
     }
 
-    .contact-side {
-      background: #111;
-      color: white;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-    }
-
-    .contact-side p {
-      color: #d7d7d7;
-    }
-
-    .contact-side a {
-      color: #25D366;
-      font-weight: bold;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 24px 16px;
+    .cta {
       margin-top: 20px;
     }
 
-    @media (max-width: 900px) {
-      .quote-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 2.4rem;
-      }
+    .cta a {
+      background: #25D366;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    @media (max-width: 600px) {
-      .hero {
-        padding: 70px 0 60px;
-      }
+    .trust {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
 
-      .hero h1 {
-        font-size: 2rem;
-      }
+    .section {
+      padding: 30px;
+      background: #fff;
+      margin-top: 10px;
+    }
 
-      .hero p {
-        font-size: 1rem;
-      }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
 
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+    .images div {
+      width: 280px;
+    }
 
-      .hero-buttons {
-        flex-direction: column;
-      }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-      .section-title {
-        font-size: 1.8rem;
-      }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    <div class="container">
-      <div>Free quotes • Fast response • Reliable service</div>
-      <div>Call: 07762 397938</div>
-    </div>
+<header>
+  <h1>ProFinish Cleaning</h1>
+  <p>Professional End of Tenancy Cleaning – London</p>
+</header>
+
+<div class="hero">
+  <h2>Reliable • Same Day Availability • 5⭐ Rated</h2>
+  <p>Trusted by landlords, agents & tenants across London</p>
+
+  <div class="cta">
+    <a href="https://wa.me/447762397938">Message on WhatsApp</a>
   </div>
-
-  <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="badge">Professional Cleaning Services Across London</div>
-        <h1>Premium Cleaning That Leaves Every Property Looking Ready, Fresh and Professionally Finished</h1>
-        <p>
-          ProFinish Cleaning provides high-standard end of tenancy, deep cleaning, after-build and commercial cleaning services with fast response times and free quotes.
-        </p>
-
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="https://wa.me/447762397938">Get a Quote on WhatsApp</a>
-          <a class="btn btn-secondary" href="#quote-form">Request a Quote Form</a>
-        </div>
-
-        <div class="hero-points">
-          <span>✓ Free Quotes</span>
-          <span>✓ Fast Response</span>
-          <span>✓ Reliable Service</span>
-          <span>✓ London Coverage</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">Why Clients Choose ProFinish Cleaning</h2>
-      <p class="section-subtitle">
-        We focus on presentation, detail and dependable service so landlords, tenants, agents and businesses can get properties cleaned properly and quickly.
-      </p>
-
-      <div class="trust-grid">
-        <div class="trust-card">
-          <div class="trust-icon">⚡</div>
-          <h3>Fast Response</h3>
-          <p>Quick replies and easy booking through WhatsApp or phone.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">🧼</div>
-          <h3>High Standard Finish</h3>
-          <p>Detailed cleaning with a professional result throughout the property.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">💬</div>
-          <h3>Free Quotes</h3>
-          <p>Send over the job details and get a quote without hassle.</p>
-        </div>
-        <div class="trust-card">
-          <div class="trust-icon">🤝</div>
-          <h3>Reliable Service</h3>
-          <p>Professional, dependable and focused on getting the job done properly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#eef3f8;">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">
-        Cleaning solutions for homes, rentals, managed properties and commercial spaces.
-      </p>
-
-      <div class="services-grid">
-        <div class="card">
-          <div class="service-icon">🏠</div>
-          <h3>End of Tenancy Cleaning</h3>
-          <p>Detailed cleans for tenants, landlords and letting agents to get properties looking ready for handover.</p>
-        </div>
-        <div class="card">
-          <div class="service-icon">✨</div>
-          <h3>Deep Cleaning</h3>
-          <p>Thorough cleans for kitchens, bathrooms, living spaces and whole properties that need extra attention.</p>
-        </div>
-        <div class="card">
-          <div class="service-icon">🧱</div>
-          <h3>After Build Cleaning</h3>
-          <p>Post-construction and renovation cleaning to remove dust, residue and debris professionally.</p>
-        </div>
-        <div class="card">
-          <div class="service-icon">🏢</div>
-          <h3>Commercial Cleaning</h3>
-          <p>Reliable cleaning for offices, businesses, communal areas and managed properties.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">Photo Gallery</h2>
-      <p class="section-subtitle">
-        A premium-looking gallery section for your site. You can keep these for now, then later replace them with your own real job photos.
-      </p>
-
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=80" alt="Clean modern kitchen" />
-          <div class="gallery-text">
-            <h3>Kitchen Cleaning</h3>
-            <p>Bright, polished surfaces and a professionally finished result.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="Clean living room" />
-          <div class="gallery-text">
-            <h3>Living Spaces</h3>
-            <p>Fresh, tidy presentation for homes, rentals and managed properties.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80" alt="Clean bathroom and interior" />
-          <div class="gallery-text">
-            <h3>Bathrooms & Interiors</h3>
-            <p>Attention to detail for rooms that need a spotless finish.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#eef3f8;">
-    <div class="container">
-      <h2 class="section-title">Before & After</h2>
-      <p class="section-subtitle">
-        This section helps your website feel more premium and sales-focused. Later, swap these for your own real before and after job photos.
-      </p>
-
-      <div class="before-after-box">
-        <div class="before-after-grid">
-          <div class="before">
-            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=1000&q=80" alt="Before cleaning room" />
-            <span class="label before-label">Before</span>
-            <p>Property looked tired and needed a proper professional clean.</p>
-          </div>
-
-          <div class="after">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80" alt="After cleaning room" />
-            <span class="label after-label">After</span>
-            <p>Fresh presentation, cleaner finish and ready for viewing or handover.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="about-box">
-        <h2 class="section-title" style="margin-bottom:20px;">A Cleaning Service That Looks Professional From First Contact</h2>
-        <p>
-          At ProFinish Cleaning, we focus on dependable service, clean presentation and high standards. Whether it is an end of tenancy clean, a deep clean or a commercial job, the goal is simple: leave the property looking ready.
-        </p>
-        <p>
-          We work with tenants, landlords, agents, property managers and businesses who want a fast response, clear communication and a professional result.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#eef3f8;">
-    <div class="container">
-      <h2 class="section-title">Areas We Cover</h2>
-      <p class="section-subtitle">
-        London-wide service for residential, tenancy and commercial cleaning jobs.
-      </p>
-
-      <div class="areas-grid">
-        <div class="area-card">South West London</div>
-        <div class="area-card">West London</div>
-        <div class="area-card">Central London</div>
-        <div class="area-card">North London</div>
-        <div class="area-card">East London</div>
-        <div class="area-card">South London</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="quote-form">
-    <div class="container">
-      <div class="quote-wrap">
-        <div class="quote-box">
-          <h3>Request a Free Quote</h3>
-          <p>Fill this in and it will open WhatsApp with the customer details ready to send to you.</p>
-
-          <form id="quoteRequestForm">
-            <input type="text" id="name" placeholder="Full Name" required />
-            <input type="tel" id="phone" placeholder="Phone Number" required />
-            <input type="text" id="location" placeholder="Area / Postcode" required />
-
-            <select id="service" required>
-              <option value="">Select Service</option>
-              <option>End of Tenancy Cleaning</option>
-              <option>Deep Cleaning</option>
-              <option>After Build Cleaning</option>
-              <option>Commercial Cleaning</option>
-            </select>
-
-            <textarea id="details" placeholder="Tell us about the job"></textarea>
-
-            <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Send Quote Request</button>
-          </form>
-        </div>
-
-        <div class="contact-side">
-          <h3>Need a quick response?</h3>
-          <p>Message us directly for a fast quote.</p>
-
-          <div class="contact-list">
-            <div><strong>Phone:</strong><br /><a href="tel:07762397938">07762 397938</a></div>
-            <div><strong>WhatsApp:</strong><br /><a href="https://wa.me/447762397938">Click here to message</a></div>
-            <div><strong>Coverage:</strong><br />London</div>
-            <div><strong>Quotes:</strong><br />Free and fast</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 ProFinish Cleaning. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById("quoteRequestForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const location = document.getElementById("location").value;
-      const service = document.getElementById("service").value;
-      const details = document.getElementById("details").value;
-
-      const message =
-        "Hello, I would like a quote.%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Area/Postcode: " + encodeURIComponent(location) + "%0A" +
-        "Service: " + encodeURIComponent(service) + "%0A" +
-        "Job Details: " + encodeURIComponent(details);
-
-      window.open("https://wa.me/447762397938?text=" + message, "_blank");
-    });
-  </script>
-<h2 style="text-align:center; margin-top:40px;">Recent Work</h2>
-
-<div style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
-
-  <div style="width:300px;">
-    <p><strong>Before</strong></p>
-    <img src="proof-1.PNG" style="width:100%; border-radius:10px;" />
-  </div>
-
-  <div style="width:300px;">
-    <p><strong>After</strong></p>
-    <img src="proof-2.PNG" style="width:100%; border-radius:10px;" />
-  </div>
-
 </div>
+
+<div class="trust">
+  ⭐ 5 Star Rated | 🏠 Trusted by Landlords | 📍 London Based | 🔥 Limited Slots Available
+</div>
+
+<div class="section">
+  <h2 style="text-align:center;">Recent Work</h2>
+
+  <div class="images">
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="proof-1.PNG">
+    </div>
+
+    <div>
+      <p><strong>After</strong></p>
+      <img src="proof-2.PNG">
+    </div>
+  </div>
+</div>
+
+<footer>
+  © ProFinish Cleaning London
+</footer>
+
 </body>
 </html>
