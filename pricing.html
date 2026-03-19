@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | ProFinish Cleaning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #1f2937; background: #f8fafc; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 74px; }
+    .logo { text-decoration: none; font-size: 1.35rem; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; }
+    .main-nav { display: flex; align-items: center; gap: 26px; }
+    .main-nav a { text-decoration: none; color: #334155; font-weight: 600; }
+    .nav-cta, .btn-primary { display: inline-block; text-decoration: none; background: #0f172a; color: #fff; padding: 12px 18px; border-radius: 999px; font-weight: 700; }
+    .page-hero { padding: 80px 0 48px; background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.8)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color: white; }
+    .page-hero h1 { font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.05; margin: 0 0 14px; }
+    .page-hero p { max-width: 760px; line-height: 1.7; color: rgba(255,255,255,0.92); margin: 0; }
+    .section { padding: 72px 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: #fff; border-radius: 22px; padding: 28px; border: 1px solid #e5e7eb; box-shadow: 0 12px 30px rgba(15,23,42,0.06); }
+    .card h3 { margin-top: 0; color: #0f172a; }
+    .card p, .card li { color: #475569; line-height: 1.7; }
+    .price { font-size: 2rem; font-weight: 800; color: #0f172a; margin: 8px 0 10px; }
+    .site-footer { background: #0f172a; color: rgba(255,255,255,0.88); padding: 28px 0; }
+    .footer-wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .site-footer a { color: #fff; text-decoration: none; font-weight: 700; }
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .nav-wrap { flex-wrap: wrap; justify-content: center; padding: 14px 0; }
+      .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">ProFinish Cleaning</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Simple, Professional Pricing</h1>
+      <p>Guide prices for common property sizes. Final quotes depend on the size, condition, access and exact cleaning requirements.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>1 Bedroom Property</h3>
+          <div class="price">From £180</div>
+          <p>Ideal for flats, smaller homes and standard end of tenancy or deep cleaning work.</p>
+        </div>
+        <div class="card">
+          <h3>2 Bedroom Property</h3>
+          <div class="price">From £260</div>
+          <p>Great for larger flats, family homes and more detailed property refreshes.</p>
+        </div>
+        <div class="card">
+          <h3>3 Bedroom+ Property</h3>
+          <div class="price">From £350</div>
+          <p>Best for larger homes and heavier-condition jobs needing extra time and detail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>© 2026 ProFinish Cleaning. Professional cleaning services you can trust.</div>
+      <a href="tel:07762397938">Call / WhatsApp: 07762 397938</a>
+    </div>
+  </footer>
+</body>
+</html>
