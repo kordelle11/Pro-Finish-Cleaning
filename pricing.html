@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | ProFinish Cleaning</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --white:#fff; --dark:#0f172a; --text:#1f2937; --muted:#64748b;
+      --line:#e5e7eb; --primary:#0b5ed7; --shadow:0 12px 40px rgba(15,23,42,0.08);
+      --radius:18px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:20px;flex-wrap:wrap}
+    .brand{font-size:24px;font-weight:800;color:var(--dark)}
+    .brand span{color:var(--primary)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .hero{padding:70px 0;background:linear-gradient(135deg,#0f172a,#0b5ed7);color:#fff}
+    .hero h1{margin:0 0 12px;font-size:46px;letter-spacing:-1px}
+    .hero p{margin:0;max-width:760px;color:rgba(255,255,255,.9)}
+    section{padding:70px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card h2{margin:0 0 8px;color:var(--dark)}
+    .price{font-size:34px;font-weight:800;color:var(--primary);margin-bottom:12px}
+    .card p{margin:0 0 14px;color:var(--muted)}
+    .card ul{margin:0;padding-left:18px;color:#475569}
+    .card li{margin-bottom:8px}
+    .note{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);color:#475569}
+    footer{background:#0b1220;color:#d7e1ef;padding:28px 0;margin-top:40px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    @media (max-width:760px){.hero h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">Pro<span>Finish</span> Cleaning</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Pricing Guide</h1>
+      <p>Guide prices for common jobs. Final quotes can vary depending on property size, condition, access and job requirements.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h2>1 Bedroom</h2>
+          <div class="price">from £120</div>
+          <p>Suitable for smaller flats and light-to-moderate cleaning requirements.</p>
+          <ul>
+            <li>End of tenancy or deep clean basis</li>
+            <li>Quote depends on condition</li>
+            <li>Ideal for smaller properties</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>2 Bedroom</h2>
+          <div class="price">from £180</div>
+          <p>Common for rental properties and larger flats requiring a fuller clean.</p>
+          <ul>
+            <li>Move-out cleans</li>
+            <li>Deep cleaning options</li>
+            <li>Flexible depending on property needs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>3 Bedroom+</h2>
+          <div class="price">from £250</div>
+          <p>For larger properties, more complex cleaning jobs or heavier-condition spaces.</p>
+          <ul>
+            <li>Suitable for larger homes</li>
+            <li>Can include post-build work</li>
+            <li>Best priced after details are reviewed</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Need an exact quote?</strong><br />
+        Call <a href="tel:07762397938">07762 397938</a> or head to the contact page with your property details and service needed.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2026 ProFinish Cleaning</div>
+  </footer>
+</body>
+</html>
