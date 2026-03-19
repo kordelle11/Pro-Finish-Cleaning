@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ProFinish Cleaning</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --white:#fff; --dark:#0f172a; --text:#1f2937; --muted:#64748b;
+      --line:#e5e7eb; --primary:#0b5ed7; --shadow:0 12px 40px rgba(15,23,42,0.08);
+      --radius:18px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:20px;flex-wrap:wrap}
+    .brand{font-size:24px;font-weight:800;color:var(--dark)}
+    .brand span{color:var(--primary)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .hero{padding:70px 0;background:linear-gradient(135deg,#0f172a,#0b5ed7);color:#fff}
+    .hero h1{margin:0 0 12px;font-size:46px;letter-spacing:-1px}
+    .hero p{margin:0;max-width:760px;color:rgba(255,255,255,.9)}
+    section{padding:70px 0}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card h2{margin:0 0 12px;color:var(--dark)}
+    .card p{margin:0 0 14px;color:#475569}
+    .info-row{padding:14px 0;border-bottom:1px solid var(--line)}
+    .info-row:last-child{border-bottom:none}
+    footer{background:#0b1220;color:#d7e1ef;padding:28px 0;margin-top:40px}
+    @media (max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+    @media (max-width:760px){.hero h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">Pro<span>Finish</span> Cleaning</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="tel:07762397938">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch for a fast quote. Send over the service you need, the property size and any useful details.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="card">
+          <h2>Get a Quote</h2>
+          <p>The quickest way to get started is to call or message with your property details and the service required.</p>
+
+          <div class="info-row"><strong>Phone:</strong> <a href="tel:07762397938">07762 397938</a></div>
+          <div class="info-row"><strong>Area:</strong> London</div>
+          <div class="info-row"><strong>Services:</strong> End of tenancy, deep cleaning, post-build and regular cleaning</div>
+        </div>
+
+        <div class="card">
+          <h2>What to send us</h2>
+          <p>To help speed things up, include:</p>
+          <div class="info-row">Property size</div>
+          <div class="info-row">Type of cleaning required</div>
+          <div class="info-row">Condition of the property</div>
+          <div class="info-row">Preferred date / timing</div>
+          <div class="info-row">Photos if available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2026 ProFinish Cleaning</div>
+  </footer>
+</body>
+</html>
