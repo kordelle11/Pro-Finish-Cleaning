@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ProFinish Cleaning</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #1f2937; background: #f8fafc; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 74px; }
+    .logo { text-decoration: none; font-size: 1.35rem; font-weight: 800; color: #0f172a; letter-spacing: -0.4px; }
+    .main-nav { display: flex; align-items: center; gap: 26px; }
+    .main-nav a { text-decoration: none; color: #334155; font-weight: 600; }
+    .nav-cta, .btn-primary { display: inline-block; text-decoration: none; background: #0f172a; color: #fff; padding: 12px 18px; border-radius: 999px; font-weight: 700; }
+    .page-hero { padding: 80px 0 48px; background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.8)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; color: white; }
+    .page-hero h1 { font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.05; margin: 0 0 14px; }
+    .page-hero p { max-width: 760px; line-height: 1.7; color: rgba(255,255,255,0.92); margin: 0; }
+    .section { padding: 72px 0; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .card { background: #fff; border-radius: 22px; padding: 28px; border: 1px solid #e5e7eb; box-shadow: 0 12px 30px rgba(15,23,42,0.06); }
+    .card h3 { margin-top: 0; color: #0f172a; }
+    .card p, .card li { color: #475569; line-height: 1.7; }
+    .site-footer { background: #0f172a; color: rgba(255,255,255,0.88); padding: 28px 0; }
+    .footer-wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .site-footer a { color: #fff; text-decoration: none; font-weight: 700; }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .nav-wrap { flex-wrap: wrap; justify-content: center; padding: 14px 0; }
+      .main-nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">ProFinish Cleaning</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get a Fast Quote</h1>
+      <p>Send over your property details and the cleaning service you need. We’ll give you a quick, professional quote for the job.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div class="card">
+        <h3>Contact Details</h3>
+        <p><strong>Phone / WhatsApp:</strong> 07762 397938</p>
+        <p><strong>Area:</strong> London</p>
+        <p><strong>Services:</strong> End of tenancy cleaning, deep cleaning, post-build cleaning and landlord / agency cleans.</p>
+        <p><a href="tel:07762397938" class="btn-primary">Call Now</a></p>
+      </div>
+      <div class="card">
+        <h3>What to send us</h3>
+        <ul>
+          <li>Property size</li>
+          <li>Type of cleaning required</li>
+          <li>Condition of the property</li>
+          <li>Preferred date and timing</li>
+          <li>Photos if available</li>
+        </ul>
+        <p>The more details you send, the faster and more accurate your quote will be.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>© 2026 ProFinish Cleaning. Professional cleaning services you can trust.</div>
+      <a href="tel:07762397938">Call / WhatsApp: 07762 397938</a>
+    </div>
+  </footer>
+</body>
+</html>
