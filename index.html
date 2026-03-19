@@ -1,1162 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProFinish Cleaning | Premium Cleaning Services in London</title>
-  <meta
-    name="description"
-    content="Professional end of tenancy, deep cleaning, post-build and regular cleaning services across London. Fast quotes. Reliable service. Premium finish."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <meta charset="UTF-8">
+  <title>ProFinish Cleaning | London</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-2: #f0f4fa;
-      --text: #0f172a;
-      --muted: #475569;
-      --line: #e2e8f0;
-      --primary: #0f3d75;
-      --primary-2: #1759a6;
-      --accent: #22c1ff;
-      --dark: #08111f;
-      --success: #0f766e;
-      --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.06);
-      --radius: 20px;
-      --radius-sm: 14px;
-      --container: 1240px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(var(--container), calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 88px 0;
-    }
-
-    .section-title {
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.08;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-
-    .section-subtitle {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--primary-2);
-      background: rgba(23, 89, 166, 0.08);
-      border: 1px solid rgba(23, 89, 166, 0.12);
-      padding: 10px 14px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 15px;
-      transition: 0.25s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--primary-2));
-      color: #fff;
-      box-shadow: 0 16px 35px rgba(23, 89, 166, 0.22);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.14);
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.26);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-dark {
-      background: var(--text);
-      color: #fff;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-light {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #111;
       background: #fff;
-      color: var(--primary);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow-soft);
     }
 
-    /* HEADER */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.82);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.85);
-    }
-
-    .header-inner {
-      min-height: 82px;
+    header {
+      padding: 20px 40px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
-      gap: 14px;
-      min-width: 0;
+      border-bottom: 1px solid #eee;
     }
 
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      display: grid;
-      place-items: center;
-      color: white;
+    header h1 {
+      margin: 0;
       font-size: 20px;
-      font-weight: 800;
-      box-shadow: 0 12px 26px rgba(23, 89, 166, 0.2);
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
+    header a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      margin-left: 20px;
     }
 
-    .brand-text strong {
-      font-size: 17px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-text span {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav a {
-      font-size: 15px;
-      font-weight: 600;
-      color: #1e293b;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* HERO */
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 76px 0 40px;
-      background:
-        radial-gradient(circle at top left, rgba(34, 193, 255, 0.18), transparent 28%),
-        radial-gradient(circle at right center, rgba(15, 61, 117, 0.18), transparent 24%),
-        linear-gradient(135deg, #07111d 0%, #0c2340 55%, #0d3b66 100%);
-      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,0.02), rgba(255,255,255,0)),
-        url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=80") center/cover;
-      opacity: 0.17;
-      pointer-events: none;
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(42px, 7vw, 74px);
-      line-height: 0.96;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      margin-bottom: 22px;
-      max-width: 11ch;
-    }
-
-    .hero-copy p {
+    .hero p {
       font-size: 18px;
-      color: rgba(255, 255, 255, 0.84);
-      max-width: 640px;
+      color: #555;
       margin-bottom: 30px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 26px;
+    .btn {
+      padding: 14px 24px;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 5px;
+      display: inline-block;
     }
 
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 10px;
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .hero-point {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      padding: 12px 16px;
-      color: rgba(255,255,255,0.92);
-      font-size: 14px;
-      font-weight: 600;
-      backdrop-filter: blur(10px);
+    .grid {
+      display: grid;
+      gap: 20px;
     }
 
-    .hero-card {
-      position: relative;
-      z-index: 1;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 28px;
-      padding: 22px;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.22);
+    .services {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .hero-image {
-      position: relative;
-      min-height: 560px;
-      border-radius: 24px;
-      overflow: hidden;
-      background:
-        linear-gradient(to top, rgba(7,17,29,0.45), rgba(7,17,29,0.1)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80") center/cover;
-    }
-
-    .floating-box {
-      position: absolute;
-      right: 18px;
-      left: 18px;
-      bottom: 18px;
-      background: rgba(255,255,255,0.92);
-      color: var(--text);
-      border-radius: 20px;
+    .card {
+      border: 1px solid #eee;
       padding: 20px;
-      box-shadow: var(--shadow);
+      border-radius: 8px;
     }
 
-    .floating-top {
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .trust {
       display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 16px;
+      justify-content: space-around;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .floating-top h3 {
-      font-size: 20px;
-      line-height: 1.15;
-      font-weight: 800;
-      max-width: 220px;
-    }
-
-    .rating-badge {
-      background: var(--surface-2);
-      border-radius: 16px;
-      padding: 12px 14px;
-      min-width: 90px;
+    footer {
+      padding: 40px 20px;
+      background: #111;
+      color: #fff;
       text-align: center;
     }
 
-    .rating-badge strong {
-      display: block;
-      font-size: 18px;
-      line-height: 1;
-      font-weight: 800;
-    }
-
-    .rating-badge span {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-    }
-
-    .mini-features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .mini-feature {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px;
-      background: #fff;
-    }
-
-    .mini-feature strong {
-      display: block;
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .mini-feature span {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* TRUST STRIP */
-    .trust-strip-wrap {
-      margin-top: -34px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .trust-strip {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      overflow: hidden;
-    }
-
-    .trust-item {
-      padding: 26px 24px;
-      border-right: 1px solid var(--line);
-    }
-
-    .trust-item:last-child {
-      border-right: 0;
-    }
-
-    .trust-item strong {
-      display: block;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .trust-item span {
-      color: var(--muted);
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    /* SERVICES */
-    .services-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-      transition: 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(34,193,255,0.12), rgba(15,61,117,0.12));
-      color: var(--primary);
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .service-card ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .service-card li {
-      color: #334155;
-      font-size: 14px;
-      font-weight: 600;
-      padding-left: 22px;
-      position: relative;
-    }
-
-    .service-card li::before {
-      content: "•";
-      position: absolute;
-      left: 6px;
-      color: var(--accent);
-      font-size: 18px;
-      top: -1px;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 34px;
-      align-items: stretch;
-    }
-
-    .about-visual {
-      min-height: 520px;
-      border-radius: 28px;
-      overflow: hidden;
-      background:
-        linear-gradient(to top, rgba(8,17,31,0.35), rgba(8,17,31,0.04)),
-        url("https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1400&q=80") center/cover;
-      box-shadow: var(--shadow);
-    }
-
-    .about-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .about-copy {
-      color: var(--muted);
-      font-size: 16px;
-      margin: 14px 0 22px;
-    }
-
-    .about-features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    .about-feature {
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .about-feature strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-
-    .about-feature span {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    /* PROCESS */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 34px;
-    }
-
-    .process-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .process-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      color: #fff;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .process-card h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* REVIEWS */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 34px;
-    }
-
-    .review-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .stars {
-      font-size: 16px;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-
-    .review-card p {
-      color: #334155;
-      font-size: 15px;
-      margin-bottom: 16px;
-    }
-
-    .review-card strong {
-      display: block;
-      font-size: 15px;
-    }
-
-    .review-card span {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* CTA */
-    .cta-box {
-      position: relative;
-      overflow: hidden;
-      border-radius: 30px;
-      padding: 42px;
-      background:
-        radial-gradient(circle at left top, rgba(34,193,255,0.22), transparent 30%),
-        linear-gradient(135deg, #08111f 0%, #0f3d75 100%);
-      color: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .cta-box::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80") center/cover;
-      opacity: 0.09;
-      pointer-events: none;
-    }
-
-    .cta-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .cta-copy h2 {
-      font-size: clamp(30px, 4.2vw, 52px);
-      line-height: 1.04;
-      margin-bottom: 12px;
-      letter-spacing: -0.04em;
-    }
-
-    .cta-copy p {
-      color: rgba(255,255,255,0.82);
-      max-width: 680px;
-      font-size: 16px;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    /* FOOTER */
-    .footer {
-      padding: 34px 0 50px;
-    }
-
-    .footer-box {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .footer-left h3 {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-
-    .footer-left p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-right {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      align-items: center;
-      color: #334155;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    /* MOBILE */
-    .menu-toggle {
-      display: none;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .about-grid,
-      .cta-inner,
-      .services-head {
-        grid-template-columns: 1fr;
-        display: grid;
-      }
-
-      .service-grid,
-      .process-grid,
-      .reviews-grid,
-      .trust-strip {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-image {
-        min-height: 500px;
-      }
-
-      .cta-inner {
-        gap: 20px;
-      }
-
-      .cta-actions {
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: 820px) {
-      .nav,
-      .header-actions .desktop-only {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: inline-flex;
-      }
-
-      .header-inner {
-        min-height: 74px;
-      }
-
-      .hero {
-        padding-top: 42px;
-      }
-
-      .hero-copy h1 {
-        max-width: 100%;
-      }
-
-      .service-grid,
-      .process-grid,
-      .reviews-grid,
-      .trust-strip,
-      .about-features,
-      .mini-features {
-        grid-template-columns: 1fr;
-      }
-
-      .trust-item {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .trust-item:last-child {
-        border-bottom: 0;
-      }
-
-      .section {
-        padding: 68px 0;
-      }
-
-      .hero-image {
-        min-height: 440px;
-      }
-
-      .about-visual {
-        min-height: 380px;
-      }
-
-      .cta-box,
-      .about-card {
-        padding: 26px;
-      }
+    footer p {
+      margin: 8px 0;
     }
   </style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">
-        <div class="brand-mark">P</div>
-        <div class="brand-text">
-          <strong>ProFinish Cleaning</strong>
-          <span>Premium cleaning services in London</span>
-        </div>
-      </a>
+<header>
+  <h1>ProFinish Cleaning</h1>
+  <div>
+    <a href="tel:07762397938">Call</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Get Quote</a>
+  </div>
+</header>
 
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- HERO -->
+<section class="hero">
+  <h2>Professional Cleaning Services Across London</h2>
+  <p>
+    Reliable end of tenancy, deep cleaning and post-build cleans for tenants, landlords and property managers. 
+    Fast turnaround, high standards, and ready for inspections.
+  </p>
 
-      <div class="header-actions">
-        <a href="pricing.html" class="btn btn-light desktop-only">View Pricing</a>
-        <a href="tel:07762397938" class="btn btn-dark">Call Now</a>
-        <button class="menu-toggle" onclick="toggleMobileMenu()">Menu</button>
-      </div>
+  <a class="btn" href="tel:07762397938">Call Now</a>
+  <a class="btn" href="#contact">Get Free Quote</a>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <div class="trust">
+    <div>
+      <h3>✔ Fully Insured</h3>
+      <p>Peace of mind on every job</p>
     </div>
-
-    <div id="mobileMenu" style="display:none; border-top:1px solid #e2e8f0; background:#fff;">
-      <div class="container" style="padding:16px 0 18px; display:grid; gap:14px;">
-        <a href="#services" onclick="toggleMobileMenu()">Services</a>
-        <a href="#about" onclick="toggleMobileMenu()">About</a>
-        <a href="#reviews" onclick="toggleMobileMenu()">Reviews</a>
-        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-        <a href="pricing.html">View Pricing</a>
-      </div>
+    <div>
+      <h3>✔ Fast Turnaround</h3>
+      <p>Same-day & next-day availability</p>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow">Professional • Reliable • Premium Finish</div>
-        <h1>Premium Cleaning Services That Look the Part</h1>
-        <p>
-          End of tenancy, deep cleaning, regular cleaning and post-build cleans across London.
-          Fast response, professional service and a spotless finish designed to give customers confidence from the first click.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-          <a href="tel:07762397938" class="btn btn-secondary">Call 07762 397938</a>
-        </div>
-
-        <div class="hero-points">
-          <div class="hero-point">✔ Fast quotes</div>
-          <div class="hero-point">✔ Flexible bookings</div>
-          <div class="hero-point">✔ Trusted service</div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="hero-image">
-          <div class="floating-box">
-            <div class="floating-top">
-              <div>
-                <h3>Trusted for spotless results across London</h3>
-              </div>
-              <div class="rating-badge">
-                <strong>5★</strong>
-                <span>Service Focus</span>
-              </div>
-            </div>
-
-            <div class="mini-features">
-              <div class="mini-feature">
-                <strong>End of Tenancy</strong>
-                <span>Detailed cleans ready for inspection and handover.</span>
-              </div>
-              <div class="mini-feature">
-                <strong>Deep Cleaning</strong>
-                <span>Kitchens, bathrooms, living spaces and full property resets.</span>
-              </div>
-              <div class="mini-feature">
-                <strong>Post-Build</strong>
-                <span>Dust removal, debris clean-up and final finishing cleans.</span>
-              </div>
-              <div class="mini-feature">
-                <strong>Fast Response</strong>
-                <span>Quick communication when customers need a quote fast.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h3>✔ High Standards</h3>
+      <p>Inspection-ready results</p>
     </div>
-  </section>
-
-  <div class="trust-strip-wrap">
-    <div class="container">
-      <div class="trust-strip">
-        <div class="trust-item">
-          <strong>100+</strong>
-          <span>Properties cleaned and refreshed</span>
-        </div>
-        <div class="trust-item">
-          <strong>5★</strong>
-          <span>Premium standard customer care</span>
-        </div>
-        <div class="trust-item">
-          <strong>24hr</strong>
-          <span>Fast quote turnaround</span>
-        </div>
-        <div class="trust-item">
-          <strong>London</strong>
-          <span>Local service with a professional finish</span>
-        </div>
-      </div>
+    <div>
+      <h3>✔ London Coverage</h3>
+      <p>All areas covered</p>
     </div>
   </div>
+</section>
 
-  <section class="section" id="services">
-    <div class="container">
-      <div class="services-head">
-        <div>
-          <div class="eyebrow">Our Services</div>
-          <h2 class="section-title">Professional cleaning solutions for homes, tenants and landlords</h2>
-          <p class="section-subtitle">
-            Built for customers who want a cleaner that feels reliable, modern and easy to trust.
-          </p>
-        </div>
-        <div>
-          <a href="pricing.html" class="btn btn-dark">See Pricing Options</a>
-        </div>
-      </div>
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
 
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>End of Tenancy Cleaning</h3>
-          <p>Detailed property cleans designed for move-outs, handovers and fresh starts.</p>
-          <ul>
-            <li>Kitchens, bathrooms and appliances</li>
-            <li>Bedrooms, hallways and living spaces</li>
-            <li>Ideal for tenants, landlords and agents</li>
-          </ul>
-        </div>
+  <div class="grid services">
 
-        <div class="service-card">
-          <div class="service-icon">✨</div>
-          <h3>Deep Cleaning</h3>
-          <p>Perfect for homes that need a proper reset with extra attention to detail.</p>
-          <ul>
-            <li>Build-up removal in high-use areas</li>
-            <li>Detailed bathroom and kitchen clean</li>
-            <li>Whole-home premium finish</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🧱</div>
-          <h3>Post-Build Cleaning</h3>
-          <p>Professional dust, residue and debris removal after renovation or construction work.</p>
-          <ul>
-            <li>Fine dust clean-up</li>
-            <li>Surface wipe-down and polish</li>
-            <li>Ready-to-use final finish</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">🧼</div>
-          <h3>Regular Cleaning</h3>
-          <p>Routine cleaning visits to keep your property looking fresh, clean and maintained.</p>
-          <ul>
-            <li>Weekly or flexible visits</li>
-            <li>Home-focused cleaning support</li>
-            <li>Reliable, consistent service</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="about" style="padding-top: 24px;">
-    <div class="container about-grid">
-      <div class="about-visual"></div>
-
-      <div class="about-card">
-        <div class="eyebrow">Why Choose Us</div>
-        <h2 class="section-title">A cleaner brand feel with a premium customer experience</h2>
-        <p class="about-copy">
-          ProFinish Cleaning is designed to feel more trusted, more modern and more professional from the moment a customer lands on the page.
-          We focus on clear communication, quality presentation and a finish that gives people confidence in booking.
-        </p>
-
-        <div class="about-features">
-          <div class="about-feature">
-            <strong>Professional first impression</strong>
-            <span>A cleaner, more premium look that builds trust quickly.</span>
-          </div>
-          <div class="about-feature">
-            <strong>Fast quote experience</strong>
-            <span>Customers can easily call or request pricing without confusion.</span>
-          </div>
-          <div class="about-feature">
-            <strong>Property-focused services</strong>
-            <span>Ideal for end of tenancy, landlords, post-build and deep cleans.</span>
-          </div>
-          <div class="about-feature">
-            <strong>Built to convert</strong>
-            <span>Sections are laid out to make people feel confident contacting you.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top: 10px;">
-    <div class="container">
-      <div class="eyebrow">Simple Process</div>
-      <h2 class="section-title">Easy from quote to clean</h2>
-      <p class="section-subtitle">
-        Keep the customer journey simple so people actually reach out instead of leaving the website.
+    <div class="card">
+      <h3>End of Tenancy Cleaning</h3>
+      <p>
+        Full property cleans designed to meet landlord and letting agent standards.
+        Ideal for tenants moving out or landlords preparing new tenants.
       </p>
-
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="process-number">1</div>
-          <h3>Get in touch</h3>
-          <p>Customer calls, messages or requests a quote through the site.</p>
-        </div>
-        <div class="process-card">
-          <div class="process-number">2</div>
-          <h3>Receive a quote</h3>
-          <p>Clear pricing guidance based on the property and cleaning needed.</p>
-        </div>
-        <div class="process-card">
-          <div class="process-number">3</div>
-          <h3>Book your clean</h3>
-          <p>A quick and simple booking process without unnecessary back and forth.</p>
-        </div>
-        <div class="process-card">
-          <div class="process-number">4</div>
-          <h3>Enjoy the finish</h3>
-          <p>The property is left fresh, presentable and professionally cleaned.</p>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <section class="section" id="reviews" style="padding-top: 18px;">
-    <div class="container">
-      <div class="eyebrow">Customer Trust</div>
-      <h2 class="section-title">The kind of feedback people expect from a premium cleaning company</h2>
-      <p class="section-subtitle">
-        These can stay here as polished placeholders until you replace them with your real customer reviews.
+    <div class="card">
+      <h3>Deep Cleaning</h3>
+      <p>
+        Thorough top-to-bottom cleaning for homes that need extra attention.
+        Kitchens, bathrooms, and high-use areas fully restored.
       </p>
-
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            “Very professional from start to finish. Communication was quick, the property looked amazing after the clean and everything felt handled properly.”
-          </p>
-          <strong>Sarah M.</strong>
-          <span>End of tenancy clean</span>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            “Reliable, punctual and the finish was excellent. It looked like a premium service and that’s exactly what we wanted.”
-          </p>
-          <strong>Daniel R.</strong>
-          <span>Deep cleaning service</span>
-        </div>
-
-        <div class="review-card">
-          <div class="stars">★★★★★</div>
-          <p>
-            “We needed a fast turnaround after building work and they delivered. Very tidy, professional and easy to deal with.”
-          </p>
-          <strong>Amira K.</strong>
-          <span>Post-build cleaning</span>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <section class="section" id="contact" style="padding-top: 18px;">
-    <div class="container">
-      <div class="cta-box">
-        <div class="cta-inner">
-          <div class="cta-copy">
-            <div class="eyebrow" style="color:#dff6ff; background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.14);">
-              Ready to Book
-            </div>
-            <h2>Need a cleaner that looks professional before the job even starts?</h2>
-            <p>
-              Contact ProFinish Cleaning today for a fast quote and a service that feels premium from first impression to final result.
-            </p>
-          </div>
-
-          <div class="cta-actions">
-            <a href="tel:07762397938" class="btn btn-primary">Call 07762 397938</a>
-            <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
-          </div>
-        </div>
-      </div>
+    <div class="card">
+      <h3>Post-Build Cleaning</h3>
+      <p>
+        Removal of dust, debris and construction residue.
+        Perfect for builders, developers and renovation projects.
+      </p>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-box">
-        <div class="footer-left">
-          <h3>ProFinish Cleaning</h3>
-          <p>Premium cleaning services across London.</p>
-        </div>
-
-        <div class="footer-right">
-          <span>📞 07762 397938</span>
-          <span>📍 London</span>
-          <span>✨ End of tenancy • Deep cleans • Post-build • Regular cleaning</span>
-        </div>
-      </div>
+    <div class="card">
+      <h3>Regular Cleaning</h3>
+      <p>
+        Ongoing weekly or fortnightly cleaning services to keep your property in top condition.
+      </p>
     </div>
-  </footer>
 
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+  <h2>Why Choose ProFinish Cleaning</h2>
+
+  <div class="grid services">
+
+    <div class="card">
+      <h3>Reliable Service</h3>
+      <p>We show up on time and get the job done properly.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attention to Detail</h3>
+      <p>No shortcuts — every clean is done to a high standard.</p>
+    </div>
+
+    <div class="card">
+      <h3>Flexible Booking</h3>
+      <p>Short notice availability when you need it most.</p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Results</h3>
+      <p>Designed to pass inspections and impress clients.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Get a Free Quote</h2>
+
+  <p>
+    Call or message now for a fast quote. 
+    Send photos or details of your property and we’ll get back to you quickly.
+  </p>
+
+  <a class="btn" href="tel:07762397938">Call 07762 397938</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>ProFinish Cleaning</h3>
+  <p>London Cleaning Services</p>
+  <p>Phone: 07762 397938</p>
+  <p>Email: profinishcleaning@email.com</p>
+  <p>Fully insured professional cleaning services</p>
+</footer>
+
 </body>
 </html>
