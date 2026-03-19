@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | ProFinish Cleaning</title>
+  <style>
+    :root{
+      --bg:#f7f9fc; --white:#fff; --dark:#0f172a; --text:#1f2937; --muted:#64748b;
+      --line:#e5e7eb; --primary:#0b5ed7; --shadow:0 12px 40px rgba(15,23,42,0.08);
+      --radius:18px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max), calc(100% - 32px)); margin:0 auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:20px;flex-wrap:wrap}
+    .brand{font-size:24px;font-weight:800;color:var(--dark)}
+    .brand span{color:var(--primary)}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700}
+    .btn-primary{background:var(--primary);color:#fff}
+    .hero{padding:70px 0;background:linear-gradient(135deg,#0f172a,#0b5ed7);color:#fff}
+    .hero h1{margin:0 0 12px;font-size:46px;letter-spacing:-1px}
+    .hero p{margin:0;max-width:760px;color:rgba(255,255,255,.9)}
+    section{padding:70px 0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card h2{margin:0 0 12px;color:var(--dark)}
+    .card p{margin:0 0 14px;color:var(--muted)}
+    .card ul{margin:0;padding-left:18px;color:#475569}
+    .card li{margin-bottom:8px}
+    footer{background:#0b1220;color:#d7e1ef;padding:28px 0;margin-top:40px}
+    @media (max-width:760px){
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">Pro<span>Finish</span> Cleaning</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Professional cleaning services across London for rental properties, homes and post-renovation spaces.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h2>End of Tenancy Cleaning</h2>
+          <p>Designed for tenants, landlords and letting agents who need a property cleaned thoroughly before handover.</p>
+          <ul>
+            <li>Full-room cleaning</li>
+            <li>Kitchen and bathroom focus</li>
+            <li>Ideal for move-out preparation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Deep Cleaning</h2>
+          <p>A stronger, more detailed clean for spaces that need extra attention beyond regular upkeep.</p>
+          <ul>
+            <li>Targeted detail cleaning</li>
+            <li>Great for refreshes and resets</li>
+            <li>Suitable for neglected areas</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Post-Build Cleaning</h2>
+          <p>Suitable after renovation, building work or decorating when dust and debris need to be removed properly.</p>
+          <ul>
+            <li>Builders dust removal</li>
+            <li>Surface wipe-downs</li>
+            <li>Presentation-ready finish</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Regular Cleaning</h2>
+          <p>Weekly or fortnightly cleaning for clients who want a cleaner, more manageable home on an ongoing basis.</p>
+          <ul>
+            <li>Flexible booking options</li>
+            <li>Consistent upkeep</li>
+            <li>Reliable service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2026 ProFinish Cleaning</div>
+  </footer>
+</body>
+</html>
