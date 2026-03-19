@@ -1,478 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | ProFinish Cleaning</title>
-  <meta name="description" content="Professional end of tenancy, deep cleaning, post-build and specialist cleaning services from ProFinish Cleaning." />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | ProFinish Cleaning</title>
 
+  <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background: #f7f9fc;
-      color: #1a1a1a;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1180px;
-      margin: 0 auto;
+      color: #333;
     }
 
     header {
-      background: #0f172a;
-      color: #fff;
-      padding: 18px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-    }
-
-    nav {
+      background: #fff;
+      padding: 15px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      border-bottom: 1px solid #eee;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
+    header a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-weight: bold;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: #fff;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: #38bdf8;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-1px);
-    }
-
+    /* HERO */
     .hero {
-      background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      color: #fff;
-      padding: 95px 0 75px;
+      background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .overlay {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
       text-align: center;
+      color: #fff;
+      border-radius: 10px;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 16px;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 24px;
-      font-size: 1.08rem;
-      color: #e5e7eb;
-    }
-
-    .trust-bar {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-    }
-
-    .trust-badge {
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.14);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-    }
-
-    .section {
-      padding: 75px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 14px;
-      font-size: 2.15rem;
-      color: #0f172a;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 48px;
-      color: #475569;
-      font-size: 1.03rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .service-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
-      padding: 28px 24px;
-      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
-      transition: 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.12);
-    }
-
-    .service-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: #e0f2fe;
-      color: #0369a1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-
-    .service-card h3 {
-      color: #0f172a;
+      font-size: 40px;
       margin-bottom: 10px;
-      font-size: 1.3rem;
     }
 
-    .service-card p {
-      color: #475569;
-      margin-bottom: 16px;
-    }
-
-    .service-card ul {
-      list-style: none;
-      margin-top: 10px;
-    }
-
-    .service-card li {
-      color: #334155;
-      margin-bottom: 10px;
-      padding-left: 22px;
-      position: relative;
-    }
-
-    .service-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #0ea5e9;
-      font-weight: 700;
-    }
-
-    .why-section {
-      background: #ffffff;
-      border-radius: 26px;
-      padding: 45px 30px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      border: 1px solid #e5e7eb;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-
-    .why-item {
-      background: #f8fbff;
-      border: 1px solid #dbeafe;
-      border-radius: 18px;
-      padding: 22px;
-    }
-
-    .why-item h4 {
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
-    .why-item p {
-      color: #475569;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+    .cta-btn {
+      background: #007BFF;
       color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    /* TRUST */
+    .trust {
+      background: #f8f9fa;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
       text-align: center;
-      padding: 70px 20px;
-      border-radius: 24px;
+      font-weight: bold;
     }
 
-    .cta h2 {
-      font-size: 2.2rem;
-      margin-bottom: 14px;
+    /* SERVICES */
+    .services {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .cta p {
-      max-width: 760px;
-      margin: 0 auto 24px;
-      color: #e2e8f0;
+    .service {
+      margin-bottom: 40px;
+    }
+
+    .service h2 {
+      color: #007BFF;
+    }
+
+    /* HOW IT WORKS */
+    .how {
+      background: #f8f9fa;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .step {
+      max-width: 250px;
+    }
+
+    /* CTA */
+    .final {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
     }
 
     footer {
-      background: #0f172a;
-      color: #cbd5e1;
       text-align: center;
-      padding: 26px 20px;
-      margin-top: 70px;
+      padding: 20px;
+      background: #111;
+      color: #fff;
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.15rem;
-      }
-
-      .section-title,
-      .cta h2 {
-        font-size: 1.8rem;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .logo {
-        width: 100%;
-        text-align: center;
-      }
-
-      .nav-links {
-        justify-content: center;
+      .trust, .steps {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">ProFinish Cleaning</div>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="services.html" class="active">Services</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-          <a href="contact.html" class="btn">Get a Quote</a>
-        </div>
-      </nav>
+<header>
+  <div><strong>ProFinish Cleaning</strong></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Professional Cleaning Services</h1>
+    <p>Reliable. Detailed. Built for landlords, tenants & property managers.</p>
+    <a href="contact.html" class="cta-btn">Get a Fast Quote</a>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div>✔ Fully Equipped</div>
+  <div>✔ Same-Day Availability</div>
+  <div>✔ End of Tenancy Specialists</div>
+  <div>✔ 5★ Service Standard</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+  <div class="service">
+    <h2>End of Tenancy Cleaning</h2>
+    <p>Full property deep clean designed to meet landlord and letting agent standards.</p>
+  </div>
+
+  <div class="service">
+    <h2>Deep Cleaning</h2>
+    <p>Thorough cleaning of all areas including hard-to-reach spaces and built-up dirt.</p>
+  </div>
+
+  <div class="service">
+    <h2>Post-Construction Cleaning</h2>
+    <p>Removal of dust, debris and residue after building or renovation work.</p>
+  </div>
+
+  <div class="service">
+    <h2>Kitchen Cleaning</h2>
+    <p>Degreasing, appliance cleaning and full sanitisation of surfaces.</p>
+  </div>
+
+  <div class="service">
+    <h2>Bathroom Cleaning</h2>
+    <p>Descaling, sanitising and restoring bathrooms to a spotless finish.</p>
+  </div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <h3>1. Send Details</h3>
+      <p>Message us with photos or property details.</p>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Professional Cleaning Services</h1>
-      <p>
-        ProFinish Cleaning provides reliable, high-standard cleaning services for tenants, landlords,
-        homeowners, letting agents and property managers who want a spotless finish and dependable service.
-      </p>
-      <div class="trust-bar">
-        <div class="trust-badge">High-Standard Results</div>
-        <div class="trust-badge">Reliable & Professional</div>
-        <div class="trust-badge">Fast Quotes</div>
-        <div class="trust-badge">Flexible Service</div>
-      </div>
+    <div class="step">
+      <h3>2. Get a Quote</h3>
+      <p>We give you a fast, clear price.</p>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Our Cleaning Services</h2>
-      <p class="section-subtitle">
-        We offer specialist cleaning services tailored to different property needs, from end of tenancy cleans
-        to post-build dust removal and full deep cleaning.
-      </p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">01</div>
-          <h3>End of Tenancy Cleaning</h3>
-          <p>
-            A detailed property clean designed for tenants, landlords and letting agents preparing for move-out
-            or the next tenancy.
-          </p>
-          <ul>
-            <li>Kitchen appliances and surfaces cleaned</li>
-            <li>Bathrooms sanitised and polished</li>
-            <li>Bedrooms, hallways and living spaces refreshed</li>
-            <li>Ideal for rental property handovers</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">02</div>
-          <h3>Deep Cleaning</h3>
-          <p>
-            Perfect for homes and properties that need more than a standard clean, with extra attention to
-            neglected areas and built-up dirt.
-          </p>
-          <ul>
-            <li>Detailed top-to-bottom cleaning</li>
-            <li>Attention to skirting, corners and touch points</li>
-            <li>Great for one-off resets</li>
-            <li>Available for homes and managed properties</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">03</div>
-          <h3>Post-Build Cleaning</h3>
-          <p>
-            Professional post-construction cleaning for newly completed or recently renovated properties that
-            need dust, debris and residue removed properly.
-          </p>
-          <ul>
-            <li>Dust removal from all surfaces</li>
-            <li>Detailed cleaning after renovation work</li>
-            <li>Suitable for builders and property developers</li>
-            <li>Tailored quotes based on site condition</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">04</div>
-          <h3>Kitchen Cleaning</h3>
-          <p>
-            High-detail kitchen cleaning designed to restore cleanliness, freshness and presentation in one of
-            the most important areas of any property.
-          </p>
-          <ul>
-            <li>Worktops, cupboards and external appliances</li>
-            <li>Sinks, taps and splash areas polished</li>
-            <li>Grease and grime removal</li>
-            <li>Add-on oven and fridge cleaning available</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">05</div>
-          <h3>Bathroom Cleaning</h3>
-          <p>
-            Thorough cleaning and sanitising of bathrooms, toilets and wash areas to leave them clean,
-            hygienic and presentation-ready.
-          </p>
-          <ul>
-            <li>Toilets, sinks, showers and baths cleaned</li>
-            <li>Tiles, mirrors and fittings polished</li>
-            <li>Soap residue and limescale targeted</li>
-            <li>Fresh and hygienic finish</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">06</div>
-          <h3>Landlord & Agency Cleans</h3>
-          <p>
-            Reliable cleaning support for landlords, estate agents and property managers who need a professional
-            standard ready for viewings, handovers or new tenants.
-          </p>
-          <ul>
-            <li>Flexible appointments available</li>
-            <li>Suitable for regular property turnover</li>
-            <li>Professional presentation-focused cleaning</li>
-            <li>Fast quote response</li>
-          </ul>
-        </div>
-      </div>
+    <div class="step">
+      <h3>3. Book & Relax</h3>
+      <p>We handle everything for a spotless finish.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <div class="why-section">
-        <h2 class="section-title">Why Choose ProFinish Cleaning?</h2>
-        <p class="section-subtitle">
-          We focus on quality, reliability and professional presentation so your property looks its best and
-          leaves the right impression.
-        </p>
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>Need a Professional Clean?</h2>
+  <p>Call or WhatsApp now for a fast quote</p>
+  <a href="tel:07762397938" class="cta-btn">Call Now</a>
+</section>
 
-        <div class="why-grid">
-          <div class="why-item">
-            <h4>Reliable Service</h4>
-            <p>We aim to provide dependable cleaning with clear communication and a professional approach.</p>
-          </div>
-          <div class="why-item">
-            <h4>Attention to Detail</h4>
-            <p>We focus on the finishing touches that make a property feel fresh, presentable and well cared for.</p>
-          </div>
-          <div class="why-item">
-            <h4>Flexible Quotes</h4>
-            <p>Every property is different, so we provide quotes based on size, condition and requirements.</p>
-          </div>
-          <div class="why-item">
-            <h4>Professional Finish</h4>
-            <p>Our goal is to leave every property with a cleaner, sharper and more premium overall feel.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="cta">
-        <h2>Need Professional Cleaning?</h2>
-        <p>
-          Whether you need an end of tenancy clean, deep clean, post-build clean or property refresh,
-          contact ProFinish Cleaning today for a fast and professional quote.
-        </p>
-        <a href="contact.html" class="btn">Get Your Free Quote</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 ProFinish Cleaning. Professional cleaning services you can trust.</p>
-    <p>Call / WhatsApp: 07762 397938</p>
-  </footer>
+<footer>
+  <p>© 2026 ProFinish Cleaning</p>
+</footer>
 
 </body>
 </html>
