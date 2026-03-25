@@ -4,171 +4,323 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | ProFinish Cleaning</title>
-  <meta name="description" content="Explore ProFinish Cleaning services including end of tenancy cleaning, post-construction cleaning, landlord turnaround cleans and deep cleaning in South West London." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Explore ProFinish Cleaning services including end of tenancy cleaning, deep cleaning, post-build cleaning and landlord turnaround cleans across South West London." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="topbar">
     <div class="container inner">
-      <span>✓ Fast Quotes</span>
-      <span>✓ Professional Property Cleaning</span>
-      <span>✓ South West London Service</span>
+      <div class="badge-row">
+        <span>✓ Fast quotes</span>
+        <span>✓ Professional property cleaning</span>
+        <span>✓ South West London service</span>
+      </div>
+      <div class="badge-row">
+        <span>Trusted by landlords, tenants & property managers</span>
+      </div>
     </div>
   </div>
 
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <div class="logo-mark">PF</div>
-        <span>ProFinish Cleaning</span>
-      </a>
-
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Pro<span>Finish</span> Cleaning</a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="pricing.html">Pricing</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#quote" class="btn btn-primary">Get a Free Quote</a>
       </nav>
-
-      <div class="nav-actions">
-        <a class="btn btn-secondary" href="tel:07762397938">Call Now</a>
-        <a class="btn btn-primary" href="https://wa.me/447762397938" target="_blank" rel="noopener">Get Quote</a>
-      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="panel">
-          <div class="eyebrow">Our Services</div>
-          <h1>Property cleaning services built for presentation, handovers and fast turnarounds</h1>
-          <p class="lead">
-            We focus on the types of cleaning most useful for landlords, letting agents, property managers, student accommodation and builders across South West London.
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Our Services</span>
+          <h1>Professional Property Cleaning Services Across South West London</h1>
+          <p>
+            ProFinish Cleaning provides high-standard cleaning services for landlords, letting agents,
+            tenants, property managers, student accommodation providers, builders and developers who
+            need clean, presentable properties and reliable turnaround support.
           </p>
+
+          <div class="hero-actions">
+            <a href="index.html#quote" class="btn btn-primary">Get a Free Quote</a>
+            <a href="pricing.html" class="btn btn-secondary">View Pricing</a>
+          </div>
+
+          <div class="hero-points">
+            <div>✓ End of tenancy cleans</div>
+            <div>✓ One-off deep cleans</div>
+            <div>✓ Post-build cleaning</div>
+            <div>✓ Landlord & agent turnarounds</div>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <h3>Need a Fast Quote?</h3>
+          <p>
+            Send over the property size, service needed and location for a quick response.
+          </p>
+
+          <form>
+            <input type="text" placeholder="Your name" />
+            <input type="email" placeholder="Your email" />
+            <input type="text" placeholder="Property location" />
+            <select>
+              <option>Select service</option>
+              <option>End of Tenancy Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Post-Build Cleaning</option>
+              <option>Landlord / Letting Agent Turnaround</option>
+            </select>
+            <textarea rows="4" placeholder="Tell us about the property or job"></textarea>
+            <button type="submit" class="btn btn-primary">Request Quote</button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container grid-2">
-        <article class="service-card">
-          <div class="icon">01</div>
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Main Cleaning Services</h2>
+        <p>
+          We focus on the services most useful for property handovers, presentation,
+          move-outs, resets and post-renovation finishes.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon-circle">🏠</div>
           <h3>End of Tenancy Cleaning</h3>
           <p>
-            Full property cleaning designed to help homes look ready for inspections, handovers and incoming tenants.
+            Full property cleaning designed to help homes look ready for inspections,
+            handovers and incoming tenants.
           </p>
-          <ul>
+          <ul class="services-list">
             <li>Kitchens, bathrooms, bedrooms and living areas cleaned in detail</li>
             <li>Ideal for flats, houses and managed properties</li>
             <li>Suitable for move-outs and pre-handover presentation</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="service-card">
-          <div class="icon">02</div>
-          <h3>Post-Construction &amp; Renovation Cleaning</h3>
+        <div class="card">
+          <div class="icon-circle">🧱</div>
+          <h3>Post-Build Cleaning</h3>
           <p>
-            Detailed cleaning after building works to remove dust, fine residue and leftover mess from construction or renovation projects.
+            Detailed cleaning after building works to remove dust, residue and leftover
+            mess from construction or renovation projects.
           </p>
-          <ul>
+          <ul class="services-list">
             <li>Dust removal from surfaces, edges and high-use areas</li>
             <li>Good for builders, developers and property owners</li>
             <li>Helps a finished space feel clean and ready to use</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="service-card">
-          <div class="icon">03</div>
-          <h3>Landlord &amp; Letting Agent Turnaround Cleans</h3>
+        <div class="card">
+          <div class="icon-circle">🔑</div>
+          <h3>Landlord & Letting Agent Turnaround Cleans</h3>
           <p>
-            Fast, reliable cleaning support between tenants or during property resets where presentation and speed matter.
+            Fast, reliable cleaning support between tenants or during property resets
+            where presentation and speed matter.
           </p>
-          <ul>
+          <ul class="services-list">
             <li>Useful for managed portfolios and void properties</li>
             <li>Flexible around timing, condition and property size</li>
             <li>Focused on cleaner handovers and better presentation</li>
           </ul>
-        </article>
+        </div>
 
-        <article class="service-card">
-          <div class="icon">04</div>
-          <h3>Deep Cleaning <span class="muted">(On Request)</span></h3>
+        <div class="card">
+          <div class="icon-circle">✨</div>
+          <h3>One-Off Deep Cleaning</h3>
           <p>
-            One-off deep cleans for properties that need more than a surface clean and require extra attention throughout.
+            One-off deep cleans for properties that need more than a surface clean and
+            require extra attention throughout.
           </p>
-          <ul>
+          <ul class="services-list">
             <li>Suitable for high-use areas and full refresh cleans</li>
             <li>Ideal before viewings, guests or property resets</li>
             <li>Available when a property needs a more thorough clean</li>
           </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Who these services are for</h2>
-          <p>We’re best suited to the clients who need reliability, responsiveness and a presentable result.</p>
         </div>
 
-        <div class="people-list">
-          <div class="people-badge">Landlords</div>
-          <div class="people-badge">Letting Agents</div>
-          <div class="people-badge">Property Managers</div>
-          <div class="people-badge">Student Accommodation Providers</div>
-          <div class="people-badge">Builders &amp; Developers</div>
+        <div class="card">
+          <div class="icon-circle">🏢</div>
+          <h3>Student Accommodation Turnovers</h3>
+          <p>
+            Cleaning support for student accommodation providers needing rooms or units
+            reset quickly and presented well between occupancies.
+          </p>
+          <ul class="services-list">
+            <li>Fast turnaround support</li>
+            <li>Useful for blocks, units and repeated cleans</li>
+            <li>Designed for presentation and readiness</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="icon-circle">🛠️</div>
+          <h3>Builder & Developer Cleans</h3>
+          <p>
+            Reliable cleaning for newly finished or recently improved properties before
+            handover, viewing, sale or occupation.
+          </p>
+          <ul class="services-list">
+            <li>Ideal after renovations and fit-outs</li>
+            <li>Good for final presentation</li>
+            <li>Helps properties feel complete and ready</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h2>Need a quote for a property clean?</h2>
-            <p>Send the property size, type of clean and preferred timing for a quick response.</p>
-          </div>
-
-          <div class="hero-actions" style="margin:0;">
-            <a class="btn btn-primary" href="https://wa.me/447762397938" target="_blank" rel="noopener">Get Fast Quote</a>
-            <a class="btn btn-secondary" href="tel:07762397938">Call Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>ProFinish Cleaning</h4>
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Who We Work With</h2>
         <p>
-          Reliable property cleaning for landlords, letting agents, student accommodation and builders across South West London.
+          Our services are best suited to clients who need reliability, responsiveness
+          and a clean, presentable result.
         </p>
       </div>
 
-      <div>
-        <h4>Quick Links</h4>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="services.html">Services</a></p>
-        <p><a href="pricing.html">Pricing</a></p>
-      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Landlords</h3>
+          <p>
+            For void properties, end of tenancy cleans and preparing homes for new tenants.
+          </p>
+        </div>
 
-      <div>
-        <h4>Contact</h4>
-        <p><a href="tel:07762397938">07762 397938</a></p>
-        <p><a href="mailto:ProFinishCleaning@gmail.com">ProFinishCleaning@gmail.com</a></p>
-        <p>South West London</p>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Letting Agents & Property Managers</h3>
+          <p>
+            For reliable support when presentation, speed and property readiness matter.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Builders & Accommodation Providers</h3>
+          <p>
+            For post-build finishes, turnover cleans and preparing spaces for handover or use.
+          </p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="container footer-bottom">
-      © 2026 ProFinish Cleaning. All rights reserved.
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Clients Choose ProFinish Cleaning</h2>
+        <p>
+          We keep our service straightforward, responsive and focused on the type of finish
+          clients want when a property needs to look right.
+        </p>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Very responsive and easy to deal with. The property looked fresh and ready
+            for the next tenants.”
+          </p>
+          <strong>Landlord Client</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Ideal for turnaround cleaning where timing and presentation both matter.”
+          </p>
+          <strong>Property Support Client</strong>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Professional-looking result and exactly the type of clean needed before handover.”
+          </p>
+          <strong>Project Client</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Need a Quote for a Property Clean?</h3>
+          <p>
+            Send the property size, type of clean and preferred timing for a quick response.
+          </p>
+        </div>
+        <a href="index.html#quote" class="btn btn-secondary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact ProFinish Cleaning</h2>
+        <p>
+          For availability, pricing and service enquiries, get in touch directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Details</h3>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> ProFinishCleaning@gmail.com</li>
+            <li><strong>Area:</strong> South West London</li>
+            <li><strong>Services:</strong> End of tenancy, deep cleans, post-build and turnaround cleans</li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h3>Best For</h3>
+          <ul class="contact-list">
+            <li>Landlords</li>
+            <li>Letting agents</li>
+            <li>Property managers</li>
+            <li>Tenants</li>
+            <li>Builders and developers</li>
+            <li>Student accommodation providers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">Pro<span>Finish</span> Cleaning</div>
+        <div class="small">Premium property cleaning across South West London.</div>
+      </div>
+      <div class="small">
+        Email: ProFinishCleaning@gmail.com
+      </div>
     </div>
   </footer>
 
