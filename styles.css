@@ -580,3 +580,12 @@ footer{
     font-size:26px;
   }
 }
+.quote-card iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
+}
+
+.quote-card {
+  padding: 30px;
+}
