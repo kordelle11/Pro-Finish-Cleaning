@@ -589,3 +589,13 @@ footer{
 .quote-card {
   padding: 30px;
 }
+.quote-card iframe {
+  width: 100%;
+  min-height: 680px;
+  border: none;
+  display: block;
+}
+
+.quote-card {
+  overflow: visible;
+}
