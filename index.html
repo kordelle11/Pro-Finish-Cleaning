@@ -11,6 +11,75 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
+
+  <style>
+    .quote-card iframe {
+      width: 100%;
+      min-height: 650px;
+      border: none;
+      display: block;
+    }
+
+    .quote-card {
+      overflow: hidden;
+    }
+
+    .quote-embed-wrap {
+      margin-top: 20px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .quote-note {
+      margin-top: 14px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .section-subpoints {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .section-subpoint {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .section-subpoint strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .areas-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .areas-list span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .section-subpoints {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-card iframe {
+        min-height: 720px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -48,8 +117,8 @@
           <h1>Professional End of Tenancy, Deep Cleaning & Post-Build Cleans</h1>
           <p>
             ProSharpe Cleaning delivers reliable, high-standard property cleaning for landlords,
-            letting agents, tenants, builders and property managers who need a spotless finish
-            and a fast turnaround.
+            letting agents, tenants, builders and property managers who need a spotless finish,
+            strong presentation and a fast turnaround.
           </p>
 
           <div class="hero-actions">
@@ -63,13 +132,32 @@
             <div>✓ Post-build cleaning</div>
             <div>✓ Landlord & agent turnarounds</div>
           </div>
+
+          <div class="areas-list">
+            <span>Clapham</span>
+            <span>Brixton</span>
+            <span>Balham</span>
+            <span>Tooting</span>
+            <span>Wandsworth</span>
+            <span>South West London</span>
+          </div>
         </div>
 
         <div class="quote-card" id="quote">
           <h3>Request a Fast Quote</h3>
-          <p>Tell us what type of clean you need and we’ll get back to you quickly.</p>
+          <p>
+            Tell us what type of clean you need and send your property details through our online form.
+            We’ll review the job and get back to you quickly.
+          </p>
 
-          <div id="2e693493-b61e-4721-86b2-2d1134125505-2492760"></div>
+          <div class="quote-embed-wrap">
+            <div id="2e693493-b61e-4721-86b2-2d1134125505-2492760"></div>
+          </div>
+
+          <p class="quote-note">
+            Having trouble with the form? Refresh the page or use the contact section below to reach us.
+          </p>
+
           <script
             src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js"
             clienthub_id="2e693493-b61e-4721-86b2-2d1134125505-2492760"
@@ -119,12 +207,12 @@
           <h3>End of Tenancy Cleaning</h3>
           <p>
             Thorough property cleans designed to leave homes fresh, presentable and ready for
-            the next tenant or final inspection.
+            the next tenant, check-out or final inspection.
           </p>
           <ul class="services-list">
             <li>Kitchens, bathrooms and living areas</li>
             <li>Dusting, wiping and sanitising</li>
-            <li>Ideal for tenant move-outs</li>
+            <li>Ideal for tenant move-outs and landlords</li>
           </ul>
         </div>
 
@@ -132,13 +220,13 @@
           <div class="icon-circle">✨</div>
           <h3>One-Off Deep Cleaning</h3>
           <p>
-            A full deep clean for properties that need extra attention, whether it’s after neglect,
-            a reset, or a freshen-up before viewings.
+            A full deep clean for properties that need extra attention, whether after neglect,
+            before viewings, or as a full property reset.
           </p>
           <ul class="services-list">
             <li>Detailed room-by-room cleaning</li>
-            <li>Attention to high-use areas</li>
-            <li>Ideal for homes and rentals</li>
+            <li>Attention to high-use areas and build-up</li>
+            <li>Ideal for homes, rentals and managed properties</li>
           </ul>
         </div>
 
@@ -147,12 +235,12 @@
           <h3>Post-Build Cleaning</h3>
           <p>
             Careful post-construction and renovation cleans to remove dust, debris and residue
-            so the property is ready to show or hand over.
+            so the property is ready to show, hand over or occupy.
           </p>
           <ul class="services-list">
             <li>Post-renovation dust removal</li>
             <li>Surface wipe-downs and finishing touches</li>
-            <li>Perfect for builders and developers</li>
+            <li>Perfect for builders, developers and refurbishments</li>
           </ul>
         </div>
       </div>
@@ -164,34 +252,53 @@
       <div class="section-title">
         <h2>Why Choose ProSharpe Cleaning</h2>
         <p>
-          A premium-looking service needs a premium-looking result. We keep things simple,
-          professional and focused on quality.
+          We keep things simple, professional and focused on the result — a property that looks clean,
+          feels fresh and is ready for handover, inspection or the next tenant.
         </p>
       </div>
 
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Tell Us About the Job</h3>
+          <h3>Send Your Job Details</h3>
           <p>
-            Submit your property details through our quote form for a fast response.
+            Complete the quote form with your property details, service needed and preferred timing.
           </p>
         </div>
 
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Receive Your Quote</h3>
+          <h3>Receive a Clear Quote</h3>
           <p>
-            We review your request and provide a clear quote based on the property and cleaning required.
+            We review the request and send a straightforward quote based on the job and property requirements.
           </p>
         </div>
 
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Book Your Clean</h3>
+          <h3>Get the Property Ready</h3>
           <p>
-            Once approved, we arrange the clean and get the property ready to a high standard.
+            Once approved, we arrange the clean and deliver a high-standard finish with a professional approach.
           </p>
+        </div>
+      </div>
+
+      <div class="section-subpoints">
+        <div class="section-subpoint">
+          <strong>Built for property work</strong>
+          <span>Designed around tenancy, deep cleaning, post-build and turnaround jobs.</span>
+        </div>
+        <div class="section-subpoint">
+          <strong>Premium presentation</strong>
+          <span>A clean done properly helps properties show better and feel ready faster.</span>
+        </div>
+        <div class="section-subpoint">
+          <strong>Clear communication</strong>
+          <span>Fast quote requests, simple booking process and professional handling throughout.</span>
+        </div>
+        <div class="section-subpoint">
+          <strong>Local focus</strong>
+          <span>Serving South West London with a service tailored to local landlords and property clients.</span>
         </div>
       </div>
     </div>
@@ -202,7 +309,7 @@
       <div class="section-title">
         <h2>Professional, Clean, High-Standard Results</h2>
         <p>
-          Strong visuals help build trust. These images reflect the bright, polished style expected
+          Strong visuals help build trust. These images reflect the bright, polished look expected
           from a premium cleaning service.
         </p>
       </div>
@@ -218,36 +325,35 @@
   <section class="section">
     <div class="container">
       <div class="section-title">
-        <h2>What Clients Want From a Cleaning Company</h2>
+        <h2>Who We Work With</h2>
         <p>
-          Landlords, letting agents and property professionals want reliability, presentation and
-          a service they can trust.
+          Our service is built for clients who care about presentation, reliability and a professional finish.
         </p>
       </div>
 
-      <div class="testimonials">
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon-circle">🏢</div>
+          <h3>Landlords & Letting Agents</h3>
           <p>
-            “Fast response, professional throughout and the property looked fresh and ready for new tenants.”
+            For move-outs, fresh presentations and faster turnarounds between tenancies.
           </p>
-          <strong>Landlord Client</strong>
         </div>
 
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
+        <div class="card">
+          <div class="icon-circle">🔑</div>
+          <h3>Tenants & Residents</h3>
           <p>
-            “Very smooth to deal with and ideal for turnaround cleaning when time matters.”
+            For one-off deep cleans, reset cleans and properties that need extra attention.
           </p>
-          <strong>Letting Support</strong>
         </div>
 
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
+        <div class="card">
+          <div class="icon-circle">🛠️</div>
+          <h3>Builders & Property Managers</h3>
           <p>
-            “Exactly the type of clean and presentation standard you want before handover.”
+            For post-build cleans, handovers and properties that need to look ready without delay.
           </p>
-          <strong>Property Project Client</strong>
         </div>
       </div>
     </div>
@@ -259,7 +365,7 @@
         <div>
           <h3>Need a Property Cleaned Properly and Fast?</h3>
           <p>
-            Request your quote online for end of tenancy, deep cleaning, post-build cleaning and property turnaround cleans.
+            Request your quote online for end of tenancy, deep cleaning, post-build cleaning and fast property turnaround cleans.
           </p>
         </div>
         <a href="#quote" class="btn btn-secondary">Request a Quote</a>
@@ -272,17 +378,17 @@
       <div class="section-title">
         <h2>Contact ProSharpe Cleaning</h2>
         <p>
-          Use our online booking system to request a quote quickly and simply.
+          Send your quote request online and we’ll review the job as quickly as possible.
         </p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-content">
-          <span class="section-tag">Booking System</span>
-          <h2>Request Your Cleaning Quote Online</h2>
+          <span class="section-tag">Fast Quote Requests</span>
+          <h2>Simple Online Booking for Property Cleaning</h2>
           <p class="contact-intro">
-            Our booking form is the fastest way to send your property details, cleaning needs
-            and preferred timing. This helps us respond faster with the right quote.
+            Our online quote form is the fastest way to send your property details, cleaning needs
+            and preferred timing. It helps us review the job properly and respond with the right quote.
           </p>
 
           <div class="contact-points">
@@ -298,7 +404,7 @@
               <span class="contact-icon">⚡</span>
               <div>
                 <strong>Fast quote requests</strong>
-                <p>Designed to make enquiries quick and easy</p>
+                <p>Designed to make enquiries quick and straightforward</p>
               </div>
             </div>
 
@@ -306,7 +412,7 @@
               <span class="contact-icon">🏠</span>
               <div>
                 <strong>Built for property cleaning</strong>
-                <p>Ideal for tenancies, deep cleans and post-build jobs</p>
+                <p>Ideal for tenancy, deep cleaning and post-build jobs</p>
               </div>
             </div>
 
@@ -314,7 +420,7 @@
               <span class="contact-icon">📍</span>
               <div>
                 <strong>Areas covered</strong>
-                <p>South West London</p>
+                <p>South West London and surrounding areas</p>
               </div>
             </div>
           </div>
@@ -322,8 +428,8 @@
 
         <div>
           <div class="contact-card">
-            <h3>Who We Work With</h3>
-            <p>Our services are suitable for:</p>
+            <h3>Suitable for</h3>
+            <p>Our services are regularly requested by:</p>
             <ul class="contact-list">
               <li>Landlords</li>
               <li>Letting agents</li>
@@ -335,15 +441,15 @@
           </div>
 
           <div class="contact-card" style="margin-top: 24px;">
-            <h3>Trusted for</h3>
-            <p>We regularly support properties that need:</p>
+            <h3>Popular requests</h3>
+            <p>We commonly help with:</p>
             <ul class="contact-list">
               <li>End of tenancy cleans</li>
               <li>One-off deep cleans</li>
               <li>Post-build cleaning</li>
-              <li>Fast property turnaround</li>
-              <li>High-standard presentation</li>
-              <li>Reliable quote requests online</li>
+              <li>Fast property turnarounds</li>
+              <li>High-standard presentation cleans</li>
+              <li>Urgent quote requests online</li>
             </ul>
           </div>
         </div>
@@ -358,7 +464,7 @@
         <div class="small">Premium property cleaning across South West London.</div>
       </div>
       <div class="small">
-        Book online using the quote form above
+        Request your quote online using the form above
       </div>
     </div>
   </footer>
