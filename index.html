@@ -10,8 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
-
   <style>
     :root{
       --primary:#0f4c81;
@@ -131,12 +129,6 @@
       color:#fff;
       font-weight:700;
       box-shadow:var(--shadow);
-      transition:0.2s ease;
-    }
-
-    .nav-cta:hover{
-      background:var(--primary-dark);
-      transform:translateY(-1px);
     }
 
     .hero{
@@ -150,38 +142,16 @@
       align-items:center;
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:var(--accent);
-      color:var(--primary-dark);
-      padding:8px 14px;
-      border-radius:999px;
-      font-size:14px;
-      font-weight:700;
-      margin-bottom:18px;
-    }
-
     .hero h1{
       font-size:clamp(34px,5vw,58px);
       line-height:1.04;
-      letter-spacing:-1.4px;
       margin-bottom:18px;
     }
 
     .hero p{
       font-size:18px;
       color:var(--muted);
-      max-width:680px;
       margin-bottom:28px;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:24px;
     }
 
     .btn{
@@ -191,103 +161,16 @@
       padding:15px 22px;
       border-radius:999px;
       font-weight:700;
-      transition:0.2s ease;
     }
 
     .btn-primary{
       background:var(--primary);
       color:#fff;
-      box-shadow:var(--shadow);
-    }
-
-    .btn-primary:hover{
-      background:var(--primary-dark);
-      transform:translateY(-1px);
-    }
-
-    .btn-secondary{
-      background:#fff;
-      border:1px solid var(--line);
-      color:var(--text);
-    }
-
-    .btn-secondary:hover{
-      border-color:var(--primary);
-      color:var(--primary);
-    }
-
-    .hero-points{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .point{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:var(--radius-sm);
-      padding:16px;
-      box-shadow:var(--shadow);
-      font-weight:600;
-      color:var(--text);
-    }
-
-    .hero-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:28px;
-      box-shadow:var(--shadow);
-    }
-
-    .hero-card h3{
-      font-size:24px;
-      margin-bottom:10px;
-    }
-
-    .hero-card p{
-      font-size:16px;
-      margin-bottom:18px;
-    }
-
-    .mini-list{
-      display:grid;
-      gap:12px;
-    }
-
-    .mini-item{
-      padding:14px 16px;
-      border-radius:14px;
-      background:var(--bg);
-      border:1px solid var(--line);
-      font-weight:600;
-    }
-
-    section{
-      padding:72px 0;
-    }
-
-    .section-head{
-      text-align:center;
-      max-width:760px;
-      margin:0 auto 38px;
-    }
-
-    .section-head h2{
-      font-size:clamp(28px,4vw,42px);
-      margin-bottom:12px;
-      line-height:1.1;
-    }
-
-    .section-head p{
-      color:var(--muted);
-      font-size:17px;
     }
 
     .services-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
+      grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
 
@@ -296,72 +179,17 @@
       border:1px solid var(--line);
       border-radius:22px;
       padding:26px;
-      box-shadow:var(--shadow);
-    }
-
-    .service-card h3{
-      font-size:22px;
-      margin-bottom:10px;
-    }
-
-    .service-card p{
-      color:var(--muted);
-      margin-bottom:16px;
-    }
-
-    .service-card ul{
-      padding-left:18px;
-      color:var(--text);
-    }
-
-    .service-card li{
-      margin-bottom:8px;
-    }
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
-      gap:18px;
-    }
-
-    .why-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:22px;
-      box-shadow:var(--shadow);
-    }
-
-    .why-card h3{
-      font-size:18px;
-      margin-bottom:8px;
-    }
-
-    .why-card p{
-      color:var(--muted);
-      font-size:15px;
     }
 
     .quote-wrap{
       background:#fff;
       border:1px solid var(--line);
       border-radius:28px;
-      box-shadow:var(--shadow);
       overflow:hidden;
     }
 
     .quote-top{
-      padding:28px 28px 8px;
-    }
-
-    .quote-top h2{
-      font-size:32px;
-      margin-bottom:10px;
-    }
-
-    .quote-top p{
-      color:var(--muted);
-      font-size:17px;
+      padding:28px;
     }
 
     .quote-card{
@@ -373,316 +201,83 @@
       min-height:700px;
       border:none;
       border-radius:18px;
-      background:#fff;
-    }
-
-    .coverage{
-      background:#fff;
-    }
-
-    .coverage-box{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:28px;
-      box-shadow:var(--shadow);
-      text-align:center;
-    }
-
-    .coverage-box p{
-      color:var(--muted);
-      font-size:17px;
-      max-width:800px;
-      margin:0 auto;
-    }
-
-    .cta-band{
-      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-      color:#fff;
-      border-radius:28px;
-      padding:36px;
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-
-    .cta-band h2{
-      font-size:36px;
-      margin-bottom:12px;
-    }
-
-    .cta-band p{
-      max-width:720px;
-      margin:0 auto 22px;
-      color:rgba(255,255,255,0.88);
-      font-size:17px;
-    }
-
-    .cta-band .btn-secondary{
-      background:#fff;
-      color:var(--primary-dark);
-      border:none;
     }
 
     footer{
-      padding:28px 0 50px;
+      padding:30px;
+      text-align:center;
       color:var(--muted);
-    }
-
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      align-items:center;
-      flex-wrap:wrap;
-      border-top:1px solid var(--line);
-      padding-top:24px;
-    }
-
-    @media (max-width: 980px){
-      .hero-grid,
-      .services-grid,
-      .why-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-points{
-        grid-template-columns:1fr;
-      }
-
-      .nav{
-        flex-wrap:wrap;
-      }
-
-      .nav-links{
-        width:100%;
-        justify-content:center;
-        flex-wrap:wrap;
-      }
-    }
-
-    @media (max-width: 640px){
-      .hero{
-        padding:52px 0 32px;
-      }
-
-      section{
-        padding:56px 0;
-      }
-
-      .hero-card,
-      .service-card,
-      .why-card,
-      .coverage-box,
-      .quote-card,
-      .quote-top,
-      .cta-band{
-        padding:20px;
-      }
-
-      .brand{
-        font-size:19px;
-      }
-
-      .nav-cta,
-      .btn{
-        width:100%;
-      }
-
-      .quote-card iframe{
-        min-height:760px;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    Professional end of tenancy, deep cleaning and landlord turnaround cleans across London
+<div class="topbar">
+  Professional cleaning across London
+</div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-mark">PS</div>
+      ProSharpe Cleaning
+    </div>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#quote">Get Quote</a>
+    </div>
+
+    <a href="#quote" class="nav-cta">Book</a>
   </div>
+</header>
 
-  <header>
-    <div class="container nav">
-      <a href="#" class="brand">
-        <div class="brand-mark">PS</div>
-        <span>ProSharpe Cleaning</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#quote">Get Quote</a>
-        <a href="#coverage">Coverage</a>
-      </nav>
-
-      <a href="#quote" class="nav-cta">Book / Get Quote</a>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Premium Property Cleaning</h1>
+      <p>End of tenancy, deep cleaning and landlord turnaround cleans across London.</p>
+      <a href="#quote" class="btn btn-primary">Get Quote</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Trusted cleaning for tenants, landlords and agents</div>
-          <h1>Premium Property Cleaning That Helps You Move Out With Confidence</h1>
-          <p>
-            ProSharpe Cleaning delivers reliable end of tenancy cleans, deep cleans and landlord turnaround cleans with a professional finish and easy online booking.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#quote" class="btn btn-primary">Get a Fast Quote</a>
-            <a href="#services" class="btn btn-secondary">View Services</a>
-          </div>
-
-          <div class="hero-points">
-            <div class="point">Easy online booking</div>
-            <div class="point">Professional finish</div>
-            <div class="point">London coverage</div>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <h3>What we do best</h3>
-          <p>Simple, reliable cleaning services designed to make moving, handovers and property resets easier.</p>
-          <div class="mini-list">
-            <div class="mini-item">End of Tenancy Cleaning</div>
-            <div class="mini-item">Deep Cleaning</div>
-            <div class="mini-item">Post-Build Cleaning</div>
-            <div class="mini-item">Landlord Turnaround Cleans</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="section-head">
-          <h2>Our Cleaning Services</h2>
-          <p>
-            We focus on practical, high-value cleaning services that help properties look ready for inspection, move-in or handover.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>End of Tenancy Cleaning</h3>
-            <p>Designed for tenants, landlords and agents who need a property cleaned thoroughly before handover.</p>
-            <ul>
-              <li>Kitchens, bathrooms and living areas cleaned</li>
-              <li>Attention to high-use surfaces and details</li>
-              <li>Ideal before inspections or check-out</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <h3>Deep Cleaning</h3>
-            <p>A more thorough clean for properties that need extra care, buildup removal or a fresh reset.</p>
-            <ul>
-              <li>Detailed room-by-room cleaning</li>
-              <li>Ideal for one-off refreshes</li>
-              <li>Suitable for homes and rentals</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <h3>Landlord Turnaround Cleans</h3>
-            <p>Fast and professional cleaning support to help get properties ready between occupancies.</p>
-            <ul>
-              <li>Ready-for-viewing presentation</li>
-              <li>Great for letting turnover</li>
-              <li>Professional and reliable service</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-us">
-      <div class="container">
-        <div class="section-head">
-          <h2>Why Choose ProSharpe Cleaning</h2>
-          <p>
-            We keep things simple: clear service, professional presentation and a booking process that is easy for customers to use.
-          </p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-card">
-            <h3>Easy Booking</h3>
-            <p>Customers can request a quote quickly through the online booking form.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Professional Look</h3>
-            <p>A clean, trustworthy brand and website that helps build confidence fast.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Focused Services</h3>
-            <p>We specialise in services that are in demand and make sense for property turnover.</p>
-          </div>
-
-          <div class="why-card">
-            <h3>Built to Convert</h3>
-            <p>Simple layout, clear wording and direct calls to action that push visitors to enquire.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="quote">
-      <div class="container">
-        <div class="quote-wrap">
-          <div class="quote-top">
-            <h2>Request a Fast Quote</h2>
-            <p>
-              Fill in the form below and send over your property details. This is the main booking section for ProSharpe Cleaning.
-            </p>
-          </div>
-
-          <div class="quote-card">
-            <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.js"></script>
-            <div id="work_request_embed" data-url="YOUR-JOBBER-REQUEST-LINK"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="coverage" class="coverage">
-      <div class="container">
-        <div class="section-head">
-          <h2>Coverage</h2>
-          <p>
-            We provide cleaning services across London and surrounding areas depending on job type and availability.
-          </p>
-        </div>
-
-        <div class="coverage-box">
-          <p>
-            Need a quote for your property? Use the booking form above and include your postcode, property size and service needed. We’ll review your request and get back to you.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="cta-band">
-          <h2>Ready to Book?</h2>
-          <p>
-            Make it easy for customers to contact you and move them straight into your quote form. Keep this simple and focused.
-          </p>
-          <a href="#quote" class="btn btn-secondary">Go to Quote Form</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 ProSharpe Cleaning. All rights reserved.</div>
-      <div>Professional property cleaning in London</div>
+<section id="services">
+  <div class="container services-grid">
+    <div class="service-card">
+      <h3>End of Tenancy</h3>
     </div>
-  </footer>
+    <div class="service-card">
+      <h3>Deep Cleaning</h3>
+    </div>
+    <div class="service-card">
+      <h3>Landlord Turnaround</h3>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="container">
+    <div class="quote-wrap">
+      <div class="quote-top">
+        <h2>Book Now</h2>
+      </div>
+
+      <div class="quote-card">
+        <iframe
+          src="https://prosharpecleaning.simplybook.it/v2/#book"
+          title="Booking">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 ProSharpe Cleaning
+</footer>
 
 </body>
 </html>
