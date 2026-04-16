@@ -112,26 +112,18 @@
       filter:saturate(1.1);
     }
 
-    .brand-text{
-      min-width:0;
+    .brand-logo{
+      height:78px;
+      width:auto;
+      display:block;
+      object-fit:contain;
     }
 
-    .brand-text strong{
-      font-family:'Montserrat',sans-serif;
-      font-size:1.5rem;
-      line-height:1;
-      color:var(--navy);
+    .footer-logo{
+      height:68px;
+      width:auto;
       display:block;
-      letter-spacing:-.03em;
-    }
-
-    .brand-text span{
-      display:block;
-      color:var(--navy);
-      letter-spacing:.28em;
-      font-size:.82rem;
-      font-weight:700;
-      margin-top:3px;
+      object-fit:contain;
     }
 
     .nav-links{
@@ -740,11 +732,7 @@
   <header class="site-header">
     <div class="container nav">
       <a href="#home" class="brand" aria-label="ProSharpe Cleaning home">
-        <div class="brand-mark"></div>
-        <div class="brand-text">
-          <strong>ProSharpe</strong>
-          <span>CLEANING</span>
-        </div>
+        <img class="brand-logo" src="data:image/webp;base64,UklGRrBKAABXRUJQVlA4IKRKAADQVgGdASqkAQ0CPlEmj0UjoiGiqHPqGHAKCWNuBtoQGwn8lKvLPb99saO0GO2pObtBzZuJ+Xf/78Xt5Vm9JPxFoV+L/Hf7M/if8R6Vd0zhA9yr2k6t1s28+1YFxM2b40V/lJqa/S/S2YwuENUNIXv/N+L9W4a7M5vQCIb09ymIvn/wW4lTz0JwAAA/vQ9l+8jJ1dkfqaR/VvW7vjdb0bM4vpeuTv5r9Fv3dXf71U8Ylf8Wq8kXyJ/JH8ifyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kf8uL7+w/7l+nvf44Wp3LWv8XfQm9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvdF3i/wVV3f9G8RAAA=" alt="ProSharpe Cleaning logo" />
       </a>
 
       <nav class="nav-links">
@@ -938,15 +926,23 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-top">
-            <h2>Keep the website premium. Send ready customers to your quote flow.</h2>
-            <p>This section gives you a strong branded call-to-action without cluttering the homepage.</p>
+            <h2>Get a Quick Quote</h2>
+            <p>Fill in this short form and we’ll get back to you fast.</p>
           </div>
-          <div class="cta-body">
-            <div class="cta-contact">
-              <span>📞 07762 397 938</span>
-              <span>✉️ info@prosharpecleaning.com</span>
-            </div>
-            <a href="mailto:info@prosharpecleaning.com?subject=Quote%20Request%20-%20ProSharpe%20Cleaning" class="btn btn-primary">Request a Quote</a>
+          <div class="cta-body" style="flex-direction:column;align-items:stretch">
+            <form style="display:grid;gap:14px;max-width:600px;width:100%">
+              <input type="text" placeholder="Full Name" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
+              <input type="tel" placeholder="Phone Number" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
+              <input type="email" placeholder="Email Address" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
+              <select required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
+                <option value="">Select Service</option>
+                <option>End of Tenancy Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>After Builders Cleaning</option>
+              </select>
+              <textarea placeholder="Property details / message" rows="4" style="padding:14px;border-radius:12px;border:1px solid #dce8f5"></textarea>
+              <button type="submit" class="btn btn-primary">Request Quote</button>
+            </form>
           </div>
         </div>
       </div>
@@ -956,11 +952,7 @@
   <footer>
     <div class="container footer-wrap">
       <div class="footer-brand">
-        <div class="brand-mark" style="width:52px;height:52px;border-radius:16px"></div>
-        <div>
-          <strong>ProSharpe</strong>
-          <span>CLEANING</span>
-        </div>
+        <img class="footer-logo" src="data:image/webp;base64,UklGRrBKAABXRUJQVlA4IKRKAADQVgGdASqkAQ0CPlEmj0UjoiGiqHPqGHAKCWNuBtoQGwn8lKvLPb99saO0GO2pObtBzZuJ+Xf/78Xt5Vm9JPxFoV+L/Hf7M/if8R6Vd0zhA9yr2k6t1s28+1YFxM2b40V/lJqa/S/S2YwuENUNIXv/N+L9W4a7M5vQCIb09ymIvn/wW4lTz0JwAAA/vQ9l+8jJ1dkfqaR/VvW7vjdb0bM4vpeuTv5r9Fv3dXf71U8Ylf8Wq8kXyJ/JH8ifyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kf8uL7+w/7l+nvf44Wp3LWv8XfQm9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvdF3i/wVV3f9G8RAAA=" alt="ProSharpe Cleaning logo" />
       </div>
       <div class="footer-meta">
         Professional Cleaning Services<br />
