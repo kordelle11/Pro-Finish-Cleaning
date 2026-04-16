@@ -930,19 +930,57 @@
             <p>Fill in this short form and we’ll get back to you fast.</p>
           </div>
           <div class="cta-body" style="flex-direction:column;align-items:stretch">
-            <form style="display:grid;gap:14px;max-width:600px;width:100%">
-              <input type="text" placeholder="Full Name" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
-              <input type="tel" placeholder="Phone Number" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
-              <input type="email" placeholder="Email Address" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
-              <select required style="padding:14px;border-radius:12px;border:1px solid #dce8f5">
-                <option value="">Select Service</option>
-                <option>End of Tenancy Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>After Builders Cleaning</option>
-              </select>
-              <textarea placeholder="Property details / message" rows="4" style="padding:14px;border-radius:12px;border:1px solid #dce8f5"></textarea>
-              <button type="submit" class="btn btn-primary">Request Quote</button>
-            </form>
+            <form action="https://formsubmit.co/info@prosharpecleaning.com" method="POST" style="display:grid;gap:14px;max-width:700px;width:100%">
+
+  <input type="hidden" name="_subject" value="New Quote Request - ProSharpe Cleaning">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://pro-finish-cleaning.vercel.app/thanks.html">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <input type="text" name="name" placeholder="Full Name" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
+    <input type="tel" name="phone" placeholder="Phone Number" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <input type="email" name="email" placeholder="Email Address" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
+    <input type="text" name="postcode" placeholder="Postcode" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <select name="service" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
+      <option value="">Select Service</option>
+      <option>End of Tenancy Cleaning</option>
+      <option>Deep Cleaning</option>
+      <option>After Builders Cleaning</option>
+    </select>
+
+    <select name="property_size" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
+      <option value="">Property Size</option>
+      <option>Studio</option>
+      <option>1 Bedroom</option>
+      <option>2 Bedroom</option>
+      <option>3 Bedroom</option>
+      <option>4+ Bedroom</option>
+    </select>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <input type="date" name="preferred_date" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
+    <select name="urgency" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
+      <option value="">How soon?</option>
+      <option>Urgent - ASAP</option>
+      <option>Within 24 Hours</option>
+      <option>Within 3 Days</option>
+      <option>Within 1 Week</option>
+      <option>Just Comparing Quotes</option>
+    </select>
+  </div>
+
+  <textarea name="message" placeholder="Property details / message (example: bedrooms, bathrooms, condition, extras needed, preferred time)" rows="5" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;resize:vertical;"></textarea>
+
+  <button type="submit" class="btn btn-primary" style="width:100%;">Request Quote</button>
+</form>
           </div>
         </div>
       </div>
