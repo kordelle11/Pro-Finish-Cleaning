@@ -170,33 +170,87 @@
       box-shadow:var(--shadow);
     }
 
-    .services{
-      padding:12px 0 30px;
+    .services-showcase{
+      padding:30px 0 60px;
+      background:linear-gradient(180deg, #eef5ff 0%, #f7faff 100%);
+    }
+
+    .services-heading{
+      text-align:center;
+      margin-bottom:36px;
+    }
+
+    .services-kicker{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      color:#5f6b76;
+      background:#ffffff;
+      border:1px solid #dbe7f5;
+      border-radius:999px;
+      padding:7px 14px;
+      margin-bottom:14px;
+    }
+
+    .services-heading h2{
+      font-size:clamp(32px,5vw,52px);
+      line-height:1.05;
+      font-weight:800;
+      color:#0f1720;
+      margin:0 0 10px;
+    }
+
+    .services-heading p{
+      font-size:18px;
+      color:var(--muted);
+      margin:0;
     }
 
     .services-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:22px;
+      gap:24px;
     }
 
     .service-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:26px;
-      box-shadow:0 8px 24px rgba(15,76,129,0.05);
+      background:#ffffff;
+      border-radius:24px;
+      padding:16px 16px 20px;
+      box-shadow:0 12px 35px rgba(15, 76, 129, 0.10);
+      text-align:center;
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      border:1px solid #edf2f7;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 42px rgba(15, 76, 129, 0.16);
+    }
+
+    .service-card img{
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      border-radius:18px;
+      display:block;
+      margin-bottom:18px;
     }
 
     .service-card h3{
-      font-size:20px;
-      color:var(--primary-dark);
-      margin-bottom:8px;
+      font-size:22px;
+      line-height:1.2;
+      font-weight:800;
+      color:#0f4c81;
+      margin:0 0 10px;
     }
 
     .service-card p{
-      color:var(--muted);
-      font-size:15px;
+      font-size:16px;
+      line-height:1.5;
+      color:#4f5d6a;
+      margin:0;
     }
 
     .quote-section{
@@ -283,8 +337,38 @@
         font-size:38px;
       }
 
+      .services-showcase{
+        padding:24px 0 50px;
+      }
+
+      .services-heading{
+        margin-bottom:28px;
+      }
+
+      .services-heading h2{
+        font-size:38px;
+      }
+
+      .services-heading p{
+        font-size:16px;
+      }
+
       .services-grid{
         grid-template-columns:1fr;
+        gap:18px;
+      }
+
+      .service-card{
+        border-radius:20px;
+        padding:14px 14px 18px;
+      }
+
+      .service-card h3{
+        font-size:22px;
+      }
+
+      .service-card p{
+        font-size:15px;
       }
 
       .quote-top,
@@ -335,21 +419,50 @@
     </div>
   </section>
 
-  <section id="services" class="services">
-    <div class="container services-grid">
-      <div class="service-card">
-        <h3>End of Tenancy</h3>
-        <p>Detailed move-out cleans to help leave the property spotless.</p>
+  <section id="services" class="services-showcase">
+    <div class="container">
+      <div class="services-heading">
+        <span class="services-kicker">OUR SERVICES</span>
+        <h2>How We Can Help</h2>
+        <p>Professional cleaning solutions for every property.</p>
       </div>
 
-      <div class="service-card">
-        <h3>Deep Cleaning</h3>
-        <p>Full top-to-bottom cleaning for homes that need extra attention.</p>
-      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="images/end-of-tenancy.jpg" alt="End of Tenancy Cleaning">
+          <h3>End of Tenancy Cleaning</h3>
+          <p>Designed to meet landlord &amp; letting agent standards.</p>
+        </article>
 
-      <div class="service-card">
-        <h3>Landlord Turnaround</h3>
-        <p>Fast, reliable cleans to get properties ready for the next tenant.</p>
+        <article class="service-card">
+          <img src="images/deep-cleaning.jpg" alt="Deep Cleaning Service">
+          <h3>Deep Cleaning Service</h3>
+          <p>A detailed, top-to-bottom clean for every corner.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/post-build.jpg" alt="Post-Build Renovation Cleaning">
+          <h3>Post-Build / Renovation Cleaning</h3>
+          <p>Removing dust, debris and residue after construction work.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/kitchen-deep-clean.jpg" alt="Kitchen Deep Clean Oven and Appliances">
+          <h3>Kitchen Deep Clean (Oven &amp; Appliances)</h3>
+          <p>Cuts through grease, grime and baked-on dirt.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/bathroom-deep-clean.jpg" alt="Bathroom Deep Clean and Descale">
+          <h3>Bathroom Deep Clean &amp; Descale</h3>
+          <p>Limescale, soap scum and bacteria removal for a spotless shine.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/full-property-reset.jpg" alt="Full Property Reset Move-In Ready">
+          <h3>Full Property Reset (Move-In Ready)</h3>
+          <p>A complete clean to get your property ready for new tenants.</p>
+        </article>
       </div>
     </div>
   </section>
