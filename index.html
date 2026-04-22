@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --navy:#0a2f6f;
@@ -16,731 +17,554 @@
       --blue-light:#7fd3ff;
       --sky:#eaf6ff;
       --white:#ffffff;
-      --text:#16304d;
-      --muted:#5f7085;
-      --line:#dce8f5;
-      --success:#1e8c5a;
-      --shadow:0 20px 50px rgba(10,47,111,.14);
-      --radius:24px;
+      --text:#16202a;
+      --muted:#5f6b76;
+      --line:#dfe7f0;
+      --bg:#f7fbff;
+      --shadow:0 16px 40px rgba(10,47,111,0.10);
+      --radius:20px;
       --max:1180px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#f7fbff 0%,#edf6ff 100%);
-      line-height:1.5;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
     .container{
-      width:min(calc(100% - 32px),var(--max));
-      margin:0 auto;
+      width:min(92%, var(--max));
+      margin:auto;
     }
 
     .topbar{
-      background:linear-gradient(90deg,var(--navy-dark),var(--navy));
-      color:#fff;
-      font-size:.95rem;
+      background:var(--navy-dark);
+      color:var(--white);
+      font-size:14px;
     }
 
     .topbar .container{
       display:flex;
-      gap:16px;
       justify-content:center;
-      align-items:center;
+      gap:18px;
       padding:10px 0;
       flex-wrap:wrap;
+      text-align:center;
     }
 
-    .site-header{
+    .navbar{
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(223,231,240,0.9);
       position:sticky;
       top:0;
-      z-index:20;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(220,232,245,.85);
+      z-index:1000;
     }
 
-    .nav{
+    .nav-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:14px 0;
       gap:20px;
+      min-height:78px;
     }
 
     .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
+      font-family:'Montserrat',sans-serif;
+      font-weight:800;
+      font-size:24px;
+      color:var(--navy);
+      letter-spacing:0.2px;
     }
 
-    .brand-mark{
-      width:58px;
-      height:58px;
-      border-radius:18px;
-      background:radial-gradient(circle at 35% 35%,#54c2ff 0%,#1f8fe6 30%,#0f57af 65%,#0a2f6f 100%);
-      position:relative;
-      box-shadow:0 12px 26px rgba(10,47,111,.25);
-      overflow:hidden;
-      flex:0 0 auto;
-    }
-
-    .brand-mark::before{
-      content:'✦';
-      position:absolute;
-      top:7px;
-      right:10px;
-      color:#fff;
-      font-size:18px;
-      opacity:.95;
-    }
-
-    .brand-mark::after{
-      content:'🧴';
-      position:absolute;
-      inset:0;
-      display:grid;
-      place-items:center;
-      font-size:28px;
-      filter:saturate(1.1);
-    }
-
-    .brand-logo{
-      height:78px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-    }
-
-    .footer-logo{
-      height:68px;
-      width:auto;
-      display:block;
-      object-fit:contain;
+    .brand span{
+      color:var(--blue);
     }
 
     .nav-links{
       display:flex;
-      gap:24px;
       align-items:center;
-      font-weight:600;
-      color:var(--navy);
+      gap:26px;
       flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
-    .nav-links a:hover{color:var(--blue)}
+    .nav-links a{
+      font-weight:600;
+      color:var(--text);
+      transition:0.2s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--navy);
+    }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      border:none;
+      padding:14px 24px;
       border-radius:999px;
-      padding:14px 22px;
       font-weight:700;
-      transition:.22s ease;
+      transition:0.25s ease;
+      border:1px solid transparent;
       cursor:pointer;
     }
 
     .btn-primary{
-      color:#fff;
-      background:linear-gradient(90deg,var(--navy),#1568c4 60%,var(--blue));
-      box-shadow:0 16px 30px rgba(10,47,111,.25);
+      background:linear-gradient(135deg, var(--navy), var(--blue));
+      color:var(--white);
+      box-shadow:var(--shadow);
     }
 
-    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-primary:hover{
+      transform:translateY(-2px);
+    }
 
-    .btn-secondary{
+    .btn-outline{
+      background:var(--white);
       color:var(--navy);
-      background:#fff;
-      border:1px solid var(--line);
+      border-color:rgba(10,47,111,0.15);
+    }
+
+    .btn-outline:hover{
+      border-color:var(--navy);
+      transform:translateY(-2px);
     }
 
     .hero{
       position:relative;
       overflow:hidden;
-      padding:42px 0 28px;
-    }
-
-    .hero::before{
-      content:'';
-      position:absolute;
-      inset:0;
       background:
-        radial-gradient(circle at 15% 15%, rgba(127,211,255,.28), transparent 32%),
-        radial-gradient(circle at 85% 18%, rgba(29,143,227,.16), transparent 22%),
-        linear-gradient(180deg,#f8fcff 0%,#eef7ff 100%);
-      z-index:-2;
+        radial-gradient(circle at top right, rgba(125,211,252,0.35), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f3f9ff 100%);
+      padding:90px 0 70px;
     }
 
     .hero::after{
-      content:'';
+      content:"";
       position:absolute;
-      left:0;
-      right:0;
-      bottom:-1px;
-      height:120px;
-      background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.45) 35%,#fff 100%);
-      clip-path:ellipse(70% 100% at 50% 100%);
-      z-index:-1;
+      left:-10%;
+      right:-10%;
+      bottom:-70px;
+      height:160px;
+      background:var(--white);
+      border-radius:50% 50% 0 0 / 100% 100% 0 0;
     }
 
     .hero-grid{
+      position:relative;
+      z-index:1;
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:34px;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:40px;
       align-items:center;
     }
 
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+      display:inline-block;
+      background:#e7f3ff;
+      color:var(--navy);
+      border:1px solid #d6e9ff;
       padding:8px 14px;
       border-radius:999px;
-      background:#fff;
-      border:1px solid #d8e8f6;
-      color:var(--navy);
-      font-weight:700;
-      box-shadow:0 12px 26px rgba(10,47,111,.08);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:0.4px;
+      text-transform:uppercase;
       margin-bottom:18px;
     }
 
-    .hero h1{
+    h1{
       font-family:'Montserrat',sans-serif;
-      font-size:clamp(2.35rem,4.8vw,4.6rem);
-      line-height:.98;
-      letter-spacing:-.04em;
-      color:var(--navy);
-      margin-bottom:16px;
-      max-width:12ch;
+      font-size:clamp(36px, 5vw, 60px);
+      line-height:1.08;
+      color:var(--navy-dark);
+      margin-bottom:18px;
     }
 
-    .hero h1 span{color:#0f7fd4}
-
     .hero p{
-      font-size:1.1rem;
+      font-size:18px;
       color:var(--muted);
-      max-width:62ch;
-      margin-bottom:24px;
+      max-width:680px;
     }
 
     .hero-actions{
       display:flex;
-      gap:14px;
       flex-wrap:wrap;
-      margin-bottom:22px;
+      gap:14px;
+      margin:28px 0 26px;
     }
 
     .hero-points{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
+      display:flex;
+      flex-wrap:wrap;
       gap:12px;
-      max-width:720px;
     }
 
-    .point{
-      background:rgba(255,255,255,.88);
-      border:1px solid #d9e8f4;
-      border-radius:18px;
-      padding:14px 16px;
-      box-shadow:0 12px 24px rgba(10,47,111,.07);
+    .hero-points span{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:14px;
       font-weight:700;
       color:var(--navy);
-      min-height:76px;
-      display:flex;
-      align-items:center;
+      box-shadow:0 10px 24px rgba(10,47,111,0.05);
     }
 
     .hero-card{
-      position:relative;
-      background:#fff;
-      border-radius:30px;
-      overflow:hidden;
+      background:var(--white);
+      border:1px solid rgba(223,231,240,0.95);
+      border-radius:28px;
+      padding:28px;
       box-shadow:var(--shadow);
-      border:1px solid #dce8f5;
     }
 
-    .hero-card-top{
-      background:linear-gradient(135deg,var(--navy-dark),var(--navy) 50%,#156ac6 78%,#39a7f3 100%);
-      color:#fff;
-      padding:30px 28px 74px;
-      position:relative;
-    }
-
-    .hero-card-top::after{
-      content:'';
-      position:absolute;
-      left:-10%;
-      right:-10%;
-      bottom:16px;
-      height:44px;
-      background:linear-gradient(90deg,#53bfff,#ffffff 55%,#8ad8ff);
-      opacity:.95;
+    .offer{
+      display:inline-block;
+      background:#eef7ff;
+      color:var(--navy);
+      border:1px solid #d6e9ff;
+      padding:8px 12px;
       border-radius:999px;
-      transform:rotate(-3deg);
-    }
-
-    .hero-card-top h2{
-      font-family:'Montserrat',sans-serif;
-      font-size:2rem;
-      line-height:1;
-      margin-bottom:10px;
-    }
-
-    .hero-card-top p{color:rgba(255,255,255,.92);margin:0;max-width:36ch}
-
-    .hero-card-body{padding:26px 24px 24px}
-
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+      font-size:12px;
+      font-weight:800;
       margin-bottom:18px;
     }
 
-    .pill{
-      padding:10px 14px;
-      border-radius:999px;
-      background:linear-gradient(90deg,var(--navy),#1272cf);
-      color:#fff;
-      font-size:.92rem;
-      font-weight:700;
+    .hero-card h2{
+      font-family:'Montserrat',sans-serif;
+      font-size:26px;
+      line-height:1.2;
+      color:var(--navy-dark);
+      margin-bottom:14px;
     }
 
-    .check-list{
+    .service-tags{
       display:grid;
       gap:12px;
-      margin-bottom:22px;
+      margin:20px 0;
     }
 
-    .check-list div{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
+    .service-tags div{
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fbfdff;
+      font-weight:700;
+      color:var(--text);
+    }
+
+    .tick-list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin:20px 0 24px;
+    }
+
+    .tick-list li{
       color:var(--text);
       font-weight:600;
     }
 
-    .check-list span{color:var(--success)}
-
-    .offer-badge{
-      position:absolute;
-      right:18px;
-      top:230px;
-      width:96px;
-      height:96px;
-      border-radius:50%;
-      background:linear-gradient(180deg,#43b6ff,#1188e0);
-      color:#fff;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      box-shadow:0 14px 30px rgba(17,136,224,.28);
-      border:6px solid #fff;
+    .tick-list li::before{
+      content:"✔ ";
+      color:var(--blue);
       font-weight:800;
-      line-height:1;
-      transform:rotate(-10deg);
     }
 
-    .offer-badge small{display:block;font-size:.68rem;font-weight:700}
-    .offer-badge strong{display:block;font-size:2rem}
-
     section{
-      padding:34px 0;
+      padding:85px 0;
     }
 
     .section-head{
       text-align:center;
       max-width:760px;
-      margin:0 auto 28px;
+      margin:0 auto 50px;
     }
 
-    .section-kicker{
-      color:#1177d3;
+    .section-head .mini{
+      color:var(--blue);
       font-weight:800;
       text-transform:uppercase;
-      letter-spacing:.16em;
-      font-size:.78rem;
-      margin-bottom:10px;
+      letter-spacing:0.4px;
+      font-size:13px;
+      margin-bottom:12px;
+      display:block;
     }
 
     .section-head h2{
       font-family:'Montserrat',sans-serif;
-      color:var(--navy);
-      font-size:clamp(1.9rem,3.2vw,3rem);
-      line-height:1.03;
-      margin-bottom:12px;
-      letter-spacing:-.03em;
+      font-size:clamp(28px, 4vw, 42px);
+      line-height:1.15;
+      color:var(--navy-dark);
+      margin-bottom:14px;
     }
 
     .section-head p{
       color:var(--muted);
-      font-size:1.03rem;
+      font-size:17px;
     }
 
     .services-grid{
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:22px;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
     }
 
-    .service-card{
-      background:#fff;
+    .card{
+      background:var(--white);
       border:1px solid var(--line);
-      border-radius:26px;
-      overflow:hidden;
-      box-shadow:0 16px 34px rgba(10,47,111,.07);
-      transition:.22s ease;
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 12px 30px rgba(10,47,111,0.05);
+      height:100%;
     }
 
-    .service-card:hover{transform:translateY(-5px)}
-
-    .service-top{
-      padding:26px 24px 58px;
-      color:#fff;
-      background:linear-gradient(135deg,var(--navy),#156bc6 62%,#47b8ff 100%);
-      position:relative;
-    }
-
-    .service-top::after{
-      content:'';
-      position:absolute;
-      left:-5%;
-      right:-5%;
-      bottom:16px;
-      height:26px;
-      background:rgba(255,255,255,.92);
-      border-radius:999px;
-      transform:rotate(-3deg);
-    }
-
-    .service-icon{
-      width:64px;
-      height:64px;
-      border-radius:18px;
-      background:rgba(255,255,255,.16);
-      display:grid;
-      place-items:center;
-      font-size:30px;
-      margin-bottom:16px;
-      backdrop-filter:blur(4px);
-    }
-
-    .service-top h3{
-      font-family:'Montserrat',sans-serif;
-      font-size:1.45rem;
-      line-height:1.05;
-    }
-
-    .service-body{padding:22px 24px 24px}
-    .service-body p{color:var(--muted);margin-bottom:16px}
-
-    .service-body ul{
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-
-    .service-body li{
-      position:relative;
-      padding-left:24px;
-      color:var(--text);
-      font-weight:600;
-    }
-
-    .service-body li::before{
-      content:'✓';
-      position:absolute;
-      left:0;
-      top:0;
-      color:#1083dc;
-      font-weight:800;
-    }
-
-    .why-wrap{
-      background:linear-gradient(180deg,#fff 0%,#f5fbff 100%);
-      border-top:1px solid #e5eef8;
-      border-bottom:1px solid #e5eef8;
-    }
-
-    .trust-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:18px;
-    }
-
-    .trust-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:24px 20px;
-      box-shadow:0 16px 34px rgba(10,47,111,.06);
-    }
-
-    .trust-card strong{
-      display:block;
-      color:var(--navy);
-      font-size:1.1rem;
-      margin-bottom:8px;
-      font-family:'Montserrat',sans-serif;
-    }
-
-    .trust-card p{color:var(--muted)}
-
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:26px;
-      align-items:stretch;
-    }
-
-    .info-panel{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:30px;
-      box-shadow:0 16px 36px rgba(10,47,111,.07);
-    }
-
-    .info-panel h3{
+    .card h3{
       font-family:'Montserrat',sans-serif;
       color:var(--navy);
-      font-size:1.7rem;
-      line-height:1.05;
-      margin-bottom:14px;
+      font-size:22px;
+      margin-bottom:12px;
     }
 
-    .info-panel p{
+    .card p{
       color:var(--muted);
-      margin-bottom:18px;
+      margin-bottom:16px;
+    }
+
+    .card ul{
+      padding-left:18px;
+      color:var(--text);
+    }
+
+    .card li{
+      margin-bottom:8px;
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:20px;
+    }
+
+    .why-box{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+      box-shadow:0 10px 24px rgba(10,47,111,0.04);
+    }
+
+    .why-box h3{
+      color:var(--navy);
+      font-size:19px;
+      margin-bottom:10px;
+      font-family:'Montserrat',sans-serif;
+    }
+
+    .why-box p{
+      color:var(--muted);
+      font-size:15px;
     }
 
     .steps{
       display:grid;
-      gap:14px;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
     }
 
     .step{
-      display:grid;
-      grid-template-columns:56px 1fr;
-      gap:14px;
-      align-items:start;
-      background:#f8fbff;
-      border:1px solid #dfeaf7;
-      border-radius:20px;
-      padding:14px;
+      background:linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 10px 24px rgba(10,47,111,0.04);
     }
 
     .step-num{
-      width:56px;
-      height:56px;
-      border-radius:16px;
+      width:50px;
+      height:50px;
+      border-radius:50%;
       display:grid;
       place-items:center;
-      background:linear-gradient(180deg,var(--navy),#1380d9);
+      background:linear-gradient(135deg, var(--navy), var(--blue));
       color:#fff;
       font-weight:800;
-      font-size:1.15rem;
+      margin-bottom:16px;
+      font-size:18px;
     }
 
-    .step h4{color:var(--navy);font-size:1.06rem;margin-bottom:4px}
-    .step p{margin:0}
-
-    .contact-panel{
-      background:linear-gradient(135deg,var(--navy-dark),var(--navy) 55%,#1488df 100%);
-      color:#fff;
-      position:relative;
-      overflow:hidden;
+    .step h3{
+      font-family:'Montserrat',sans-serif;
+      color:var(--navy);
+      font-size:21px;
+      margin-bottom:8px;
     }
 
-    .contact-panel::after{
-      content:'';
-      position:absolute;
-      inset:auto -12% 18px -12%;
-      height:28px;
-      background:rgba(255,255,255,.9);
-      border-radius:999px;
-      transform:rotate(-3deg);
+    .step p{
+      color:var(--muted);
     }
 
-    .contact-panel h3,
-    .contact-panel p,
-    .contact-panel a,
-    .contact-panel li{color:#fff}
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .contact-card,
+    .cta-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-card h3,
+    .cta-card h3{
+      font-family:'Montserrat',sans-serif;
+      color:var(--navy-dark);
+      font-size:28px;
+      margin-bottom:12px;
+    }
+
+    .contact-card p,
+    .cta-card p{
+      color:var(--muted);
+      margin-bottom:18px;
+    }
 
     .contact-list{
       list-style:none;
       display:grid;
-      gap:12px;
-      margin:18px 0 22px;
-      position:relative;
-      z-index:1;
+      gap:14px;
+      margin-top:16px;
     }
 
     .contact-list li{
-      padding:14px 16px;
-      border-radius:18px;
-      background:rgba(255,255,255,.1);
-      border:1px solid rgba(255,255,255,.16);
-      backdrop-filter:blur(3px);
       font-weight:700;
+      color:var(--text);
+      word-break:break-word;
     }
 
-    .cta-band{
-      padding:32px 0 40px;
-    }
-
-    .cta-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:30px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .cta-top{
-      background:linear-gradient(90deg,var(--navy-dark),var(--navy) 48%,#1486dc 100%);
-      color:#fff;
-      padding:26px 26px 58px;
-      position:relative;
-    }
-
-    .cta-top::after{
-      content:'';
-      position:absolute;
-      left:-8%;
-      right:-8%;
-      bottom:18px;
-      height:28px;
-      background:rgba(255,255,255,.92);
-      border-radius:999px;
-      transform:rotate(-2deg);
-    }
-
-    .cta-top h2{
-      font-family:'Montserrat',sans-serif;
-      font-size:clamp(1.7rem,3vw,2.5rem);
-      line-height:1.03;
-      margin-bottom:10px;
-    }
-
-    .cta-body{
-      padding:24px 26px 26px;
+    .cta-buttons{
       display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
       flex-wrap:wrap;
-    }
-
-    .cta-contact{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      color:var(--navy);
-      font-weight:800;
-    }
-
-    footer{
-      background:linear-gradient(180deg,var(--navy-dark),var(--navy));
-      color:#fff;
+      gap:14px;
       margin-top:18px;
     }
 
-    .footer-wrap{
-      display:flex;
-      justify-content:space-between;
-      gap:24px;
+    footer{
+      background:var(--navy-dark);
+      color:rgba(255,255,255,0.92);
       padding:26px 0;
-      flex-wrap:wrap;
-      align-items:center;
+      text-align:center;
+      margin-top:30px;
+      font-size:14px;
     }
 
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
-    .footer-brand strong{
-      display:block;
-      font-family:'Montserrat',sans-serif;
-      font-size:1.25rem;
-      line-height:1;
-    }
-
-    .footer-brand span{
-      display:block;
-      letter-spacing:.24em;
-      font-size:.75rem;
-      font-weight:700;
-      margin-top:3px;
-    }
-
-    .footer-meta{
-      color:rgba(255,255,255,.84);
-      font-size:.96rem;
-      text-align:right;
-    }
-
-    @media (max-width:1080px){
+    @media (max-width: 1080px){
       .hero-grid,
-      .split,
+      .contact-wrap,
       .services-grid,
-      .trust-grid{grid-template-columns:1fr 1fr}
-      .hero-points{grid-template-columns:1fr}
-      .offer-badge{top:18px}
+      .why-grid,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .why-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr;
+      }
+
+      .steps{
+        grid-template-columns:1fr;
+      }
     }
 
-    @media (max-width:760px){
-      .nav{flex-direction:column;align-items:flex-start}
-      .nav-links{gap:14px;justify-content:flex-start}
-      .hero{padding-top:28px}
-      .hero-grid,
-      .split,
-      .services-grid,
-      .trust-grid{grid-template-columns:1fr}
-      .hero h1{max-width:none}
-      .hero-card-top{padding:24px 22px 68px}
-      .hero-card-body{padding:22px}
-      .offer-badge{position:static;margin:0 0 18px auto;transform:rotate(-8deg)}
-      .info-panel{padding:24px}
-      .cta-body{align-items:flex-start}
-      .footer-meta{text-align:left}
+    @media (max-width: 760px){
+      .nav-inner{
+        flex-direction:column;
+        justify-content:center;
+        padding:16px 0;
+      }
+
+      .nav-links{
+        justify-content:center;
+        gap:16px;
+      }
+
+      .hero{
+        padding:70px 0 50px;
+      }
+
+      .hero-card,
+      .card,
+      .why-box,
+      .step,
+      .contact-card,
+      .cta-card{
+        padding:24px;
+      }
+
+      .why-grid{
+        grid-template-columns:1fr;
+      }
+
+      .topbar .container{
+        flex-direction:column;
+        gap:8px;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="topbar">
     <div class="container">
-      <span>📞 07762 397 938</span>
-      <span>✉️ info@prosharpecleaning.com</span>
-      <span>📍 South West London</span>
+      <span>07762 397 938</span>
+      <span>info@prosharpecleaning.com</span>
+      <span>South West London</span>
     </div>
   </div>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#home" class="brand" aria-label="ProSharpe Cleaning home">
-        <img class="brand-logo" src="data:image/webp;base64,UklGRrBKAABXRUJQVlA4IKRKAADQVgGdASqkAQ0CPlEmj0UjoiGiqHPqGHAKCWNuBtoQGwn8lKvLPb99saO0GO2pObtBzZuJ+Xf/78Xt5Vm9JPxFoV+L/Hf7M/if8R6Vd0zhA9yr2k6t1s28+1YFxM2b40V/lJqa/S/S2YwuENUNIXv/N+L9W4a7M5vQCIb09ymIvn/wW4lTz0JwAAA/vQ9l+8jJ1dkfqaR/VvW7vjdb0bM4vpeuTv5r9Fv3dXf71U8Ylf8Wq8kXyJ/JH8ifyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kf8uL7+w/7l+nvf44Wp3LWv8XfQm9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvdF3i/wVV3f9G8RAAA=" alt="ProSharpe Cleaning logo" />
-      </a>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">Pro<span>Sharpe</span> Cleaning</a>
 
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#why-us">Why Us</a>
-        <a href="#process">How It Works</a>
+        <a href="#how-it-works">How It Works</a>
         <a href="#contact">Contact</a>
-        <a href="#quote" class="btn btn-primary">Get a Quote</a>
+        <a href="https://prosharpecleaning.simplybook.it/v2/#book" class="btn btn-primary" target="_blank" rel="noopener">Book Online</a>
       </nav>
     </div>
   </header>
@@ -749,40 +573,45 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Reliable • Professional • Premium Finish</div>
-          <h1>A cleaner, <span>sharper</span> look for every property.</h1>
-          <p>Professional cleaning services across London for tenants, landlords, homeowners and property professionals. Built to look polished, trustworthy and premium from the first click.</p>
+          <span class="eyebrow">Reliable • Professional • Premium Finish</span>
+          <h1>A cleaner, sharper look for every property.</h1>
+          <p>
+            Professional cleaning services across London for tenants, landlords, homeowners and property professionals.
+            Built to look polished, trustworthy and premium from the first click.
+          </p>
 
           <div class="hero-actions">
-            <a href="#services" class="btn btn-secondary">View Services</a>
+            <a href="#services" class="btn btn-primary">View Services</a>
+            <a href="https://prosharpecleaning.simplybook.it/v2/#book" target="_blank" rel="noopener" class="btn btn-outline">Book Online</a>
           </div>
 
           <div class="hero-points">
-            <div class="point">End of Tenancy specialists</div>
-            <div class="point">Deep cleaning available</div>
-            <div class="point">After builders cleaning</div>
+            <span>End of Tenancy specialists</span>
+            <span>Deep cleaning available</span>
+            <span>After builders cleaning</span>
           </div>
         </div>
 
         <div class="hero-card">
-          <div class="hero-card-top">
-            <h2>Reliable &amp; Professional Cleaning Services</h2>
-            <p>Branding and layout styled to match your flyer and business card look.</p>
+          <span class="offer">20% OFF FOR NEW CUSTOMERS</span>
+          <h2>Reliable &amp; Professional Cleaning Services</h2>
+          <p style="color: var(--muted);">
+            Branding and layout styled to match your flyer and business card look.
+          </p>
+
+          <div class="service-tags">
+            <div>End of Tenancy</div>
+            <div>Deep Clean</div>
+            <div>After Builders</div>
           </div>
-          <div class="hero-card-body">
-            <div class="offer-badge"><div><strong>20%</strong><small>OFF FOR NEW CUSTOMERS</small></div></div>
-            <div class="pill-row">
-              <div class="pill">End of Tenancy</div>
-              <div class="pill">Deep Clean</div>
-              <div class="pill">After Builders</div>
-            </div>
-            <div class="check-list">
-              <div><span>✔</span> Fully insured and vetted cleaners</div>
-              <div><span>✔</span> High-quality cleaning standards</div>
-              <div><span>✔</span> Competitive and affordable rates</div>
-            </div>
-            <a href="#contact" class="btn btn-primary" style="width:100%">Call or Enquire Today</a>
-          </div>
+
+          <ul class="tick-list">
+            <li>Fully insured and vetted cleaners</li>
+            <li>High-quality cleaning standards</li>
+            <li>Competitive and affordable rates</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary" style="width:100%;">Call or Enquire Today</a>
         </div>
       </div>
     </section>
@@ -790,196 +619,137 @@
     <section id="services">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Our Services</div>
+          <span class="mini">Our Services</span>
           <h2>Cleaning services that match the standard of your brand.</h2>
-          <p>Focused, high-value services presented in a cleaner, stronger layout inspired by your printed marketing.</p>
+          <p>
+            Focused, high-value services presented in a cleaner, stronger layout inspired by your printed marketing.
+          </p>
         </div>
 
         <div class="services-grid">
-          <article class="service-card">
-            <div class="service-top">
-              <div class="service-icon">🏠</div>
-              <h3>End of Tenancy Cleaning</h3>
-            </div>
-            <div class="service-body">
-              <p>Detailed move-out cleans for tenants, landlords and letting agents who need a property ready for handover.</p>
-              <ul>
-                <li>Kitchen, bathroom and full-room detailing</li>
-                <li>Ideal for pre-checkout presentation</li>
-                <li>Designed for rental property standards</li>
-              </ul>
-            </div>
-          </article>
+          <div class="card">
+            <h3>End of Tenancy Cleaning</h3>
+            <p>
+              Detailed move-out cleans for tenants, landlords and letting agents who need a property ready for handover.
+            </p>
+            <ul>
+              <li>Kitchen, bathroom and full-room detailing</li>
+              <li>Ideal for pre-checkout presentation</li>
+              <li>Designed for rental property standards</li>
+            </ul>
+          </div>
 
-          <article class="service-card">
-            <div class="service-top">
-              <div class="service-icon">🧼</div>
-              <h3>Deep Cleaning</h3>
-            </div>
-            <div class="service-body">
-              <p>A top-to-bottom refresh for homes and properties that need more attention than a standard clean.</p>
-              <ul>
-                <li>Built-up dirt and neglected area focus</li>
-                <li>Perfect for one-off reset cleans</li>
-                <li>Great before guests or special occasions</li>
-              </ul>
-            </div>
-          </article>
+          <div class="card">
+            <h3>Deep Cleaning</h3>
+            <p>
+              A top-to-bottom refresh for homes and properties that need more attention than a standard clean.
+            </p>
+            <ul>
+              <li>Built-up dirt and neglected area focus</li>
+              <li>Perfect for one-off reset cleans</li>
+              <li>Great before guests or special occasions</li>
+            </ul>
+          </div>
 
-          <article class="service-card">
-            <div class="service-top">
-              <div class="service-icon">🛠️</div>
-              <h3>After Builders Cleaning</h3>
-            </div>
-            <div class="service-body">
-              <p>Professional post-renovation and property refresh cleans to leave spaces dust-free, sharp and ready to use.</p>
-              <ul>
-                <li>Dust, residue and surface detailing</li>
-                <li>Ideal after decorating or building work</li>
-                <li>Tailored to each property condition</li>
-              </ul>
-            </div>
-          </article>
+          <div class="card">
+            <h3>After Builders Cleaning</h3>
+            <p>
+              Professional post-renovation and property refresh cleans to leave spaces dust-free, sharp and ready to use.
+            </p>
+            <ul>
+              <li>Dust, residue and surface detailing</li>
+              <li>Ideal after decorating or building work</li>
+              <li>Tailored to each property condition</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="why-wrap" id="why-us">
+    <section id="why-us" style="background:linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);">
       <div class="container">
         <div class="section-head">
-          <div class="section-kicker">Why Choose ProSharpe</div>
+          <span class="mini">Why Choose ProSharpe</span>
           <h2>A stronger first impression, online and offline.</h2>
-          <p>This version keeps the homepage premium, simple and brand-led instead of looking cluttered or overly template-based.</p>
+          <p>
+            This version keeps the homepage premium, simple and brand-led instead of looking cluttered or overly template-based.
+          </p>
         </div>
 
-        <div class="trust-grid">
-          <div class="trust-card">
-            <strong>Professional Branding</strong>
+        <div class="why-grid">
+          <div class="why-box">
+            <h3>Professional Branding</h3>
             <p>The navy, blue and curved wave styling mirrors your flyer and business card design.</p>
           </div>
-          <div class="trust-card">
-            <strong>Cleaner Layout</strong>
+          <div class="why-box">
+            <h3>Cleaner Layout</h3>
             <p>Less visual noise, stronger spacing and clearer sections make the site feel more premium.</p>
           </div>
-          <div class="trust-card">
-            <strong>Trust First</strong>
+          <div class="why-box">
+            <h3>Trust First</h3>
             <p>Visitors see your value, services and professionalism before they are pushed into booking.</p>
           </div>
-          <div class="trust-card">
-            <strong>Built to Convert</strong>
+          <div class="why-box">
+            <h3>Built to Convert</h3>
             <p>Clear service blocks and stronger call-to-action buttons help turn visits into enquiries.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="process">
-      <div class="container split">
-        <div class="info-panel">
-          <div class="section-kicker">Simple Process</div>
-          <h3>How it works</h3>
-          <p>Keep it easy for customers while still making the business look established and professional.</p>
-
-          <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div>
-                <h4>Choose your service</h4>
-                <p>Customers see exactly what you offer with a clean and premium service overview.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <div>
-                <h4>Request a quote</h4>
-                <p>They reach out by phone or email and you can send them to your quote page when ready.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <div>
-                <h4>Get the job booked</h4>
-                <p>You confirm the clean, keep the journey simple, and maintain the premium brand feel.</p>
-              </div>
-            </div>
-          </div>
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <span class="mini">Simple Process</span>
+          <h2>How it works</h2>
+          <p>
+            Keep it easy for customers while still making the business look established and professional.
+          </p>
         </div>
 
-        <div class="info-panel contact-panel" id="contact">
-          <div class="section-kicker" style="color:#b8e6ff">Contact</div>
-          <h3>Ready to book or ask a question?</h3>
-          <p>Use the details below for enquiries, quotes and service questions.</p>
-
-          <ul class="contact-list">
-            <li>📞 07762 397 938</li>
-            <li>✉️ info@prosharpecleaning.com</li>
-            <li>📍 South West London</li>
-          </ul>
-
-          <a href="tel:07762397938" class="btn btn-secondary">Call Now</a>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Choose your service</h3>
+            <p>Customers see exactly what you offer with a clean and premium service overview.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Request a quote</h3>
+            <p>They can call, email, or go straight to your online booking page when ready.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Get the job booked</h3>
+            <p>You confirm the clean, keep the journey simple, and maintain the premium brand feel.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-band" id="quote">
-      <div class="container">
+    <section id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <h3>Ready to book or ask a question?</h3>
+          <p>Use the details below for enquiries, quotes and service questions.</p>
+
+          <ul class="contact-list">
+            <li>📞 <a href="tel:07762397938">07762 397 938</a></li>
+            <li>✉️ <a href="mailto:info@prosharpecleaning.com">info@prosharpecleaning.com</a></li>
+            <li>📍 South West London</li>
+          </ul>
+        </div>
+
         <div class="cta-card">
-          <div class="cta-top">
-            <h2>Get a Quick Quote</h2>
-            <p>Fill in this short form and we’ll get back to you fast.</p>
-          </div>
-          <div class="cta-body" style="flex-direction:column;align-items:stretch">
-            <form action="https://formsubmit.co/info@prosharpecleaning.com" method="POST" style="display:grid;gap:14px;max-width:700px;width:100%">
+          <h3>Book online now</h3>
+          <p>
+            For the fastest route, send customers straight to your live booking page.
+            This keeps your homepage clean and makes it easy for people to take action.
+          </p>
 
-  <input type="hidden" name="_subject" value="New Quote Request - ProSharpe Cleaning">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://pro-finish-cleaning.vercel.app/thanks.html">
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-    <input type="text" name="name" placeholder="Full Name" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
-    <input type="tel" name="phone" placeholder="Phone Number" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-    <input type="email" name="email" placeholder="Email Address" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
-    <input type="text" name="postcode" placeholder="Postcode" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-    <select name="service" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
-      <option value="">Select Service</option>
-      <option>End of Tenancy Cleaning</option>
-      <option>Deep Cleaning</option>
-      <option>After Builders Cleaning</option>
-    </select>
-
-    <select name="property_size" required style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
-      <option value="">Property Size</option>
-      <option>Studio</option>
-      <option>1 Bedroom</option>
-      <option>2 Bedroom</option>
-      <option>3 Bedroom</option>
-      <option>4+ Bedroom</option>
-    </select>
-  </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-    <input type="date" name="preferred_date" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;">
-    <select name="urgency" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;background:#fff;">
-      <option value="">How soon?</option>
-      <option>Urgent - ASAP</option>
-      <option>Within 24 Hours</option>
-      <option>Within 3 Days</option>
-      <option>Within 1 Week</option>
-      <option>Just Comparing Quotes</option>
-    </select>
-  </div>
-
-  <textarea name="message" placeholder="Property details / message (example: bedrooms, bathrooms, condition, extras needed, preferred time)" rows="5" style="padding:14px;border-radius:12px;border:1px solid #dce8f5;font-size:16px;resize:vertical;"></textarea>
-
-  <button type="submit" class="btn btn-primary" style="width:100%;">Request Quote</button>
-</form>
+          <div class="cta-buttons">
+            <a href="https://prosharpecleaning.simplybook.it/v2/#book" target="_blank" rel="noopener" class="btn btn-primary">Open Booking Page</a>
+            <a href="tel:07762397938" class="btn btn-outline">Call Now</a>
           </div>
         </div>
       </div>
@@ -987,15 +757,11 @@
   </main>
 
   <footer>
-    <div class="container footer-wrap">
-      <div class="footer-brand">
-        <img class="footer-logo" src="data:image/webp;base64,UklGRrBKAABXRUJQVlA4IKRKAADQVgGdASqkAQ0CPlEmj0UjoiGiqHPqGHAKCWNuBtoQGwn8lKvLPb99saO0GO2pObtBzZuJ+Xf/78Xt5Vm9JPxFoV+L/Hf7M/if8R6Vd0zhA9yr2k6t1s28+1YFxM2b40V/lJqa/S/S2YwuENUNIXv/N+L9W4a7M5vQCIb09ymIvn/wW4lTz0JwAAA/vQ9l+8jJ1dkfqaR/VvW7vjdb0bM4vpeuTv5r9Fv3dXf71U8Ylf8Wq8kXyJ/JH8ifyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kfyR/JH8kf8uL7+w/7l+nvf44Wp3LWv8XfQm9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvcW9xb3FvdF3i/wVV3f9G8RAAA=" alt="ProSharpe Cleaning logo" />
-      </div>
-      <div class="footer-meta">
-        Professional Cleaning Services<br />
-        © 2026 ProSharpe Cleaning. All rights reserved.
-      </div>
+    <div class="container">
+      Professional Cleaning Services<br />
+      © 2026 ProSharpe Cleaning. All rights reserved.
     </div>
   </footer>
+
 </body>
 </html>
