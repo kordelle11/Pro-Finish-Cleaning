@@ -1,813 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProSharpe Cleaning | Professional Cleaning Services in London</title>
-  <meta name="description" content="ProSharpe Cleaning provides professional end of tenancy cleaning, deep cleaning and after builders cleaning across London." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --navy:#0a2f6f;
-      --navy-dark:#072454;
-      --blue:#1d8fe3;
-      --blue-light:#7fd3ff;
-      --sky:#eef7ff;
-      --white:#ffffff;
-      --text:#15202b;
-      --muted:#5f6b76;
-      --line:#dbe7f3;
-      --shadow:0 18px 50px rgba(10,47,111,0.10);
-      --radius:20px;
-      --radius-sm:14px;
-      --max:1180px;
-    }
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family:'Inter',sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#f8fbff 0%, #eef6ff 100%);
-      line-height:1.6;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    .container{
-      width:min(92%, var(--max));
-      margin:0 auto;
-    }
-
-    .topbar{
-      background:var(--navy-dark);
-      color:var(--white);
-      font-size:0.92rem;
-    }
-
-    .topbar .container{
-      display:flex;
-      justify-content:center;
-      gap:22px;
-      flex-wrap:wrap;
-      padding:10px 0;
-      text-align:center;
-    }
-
-    .topbar span{
-      opacity:0.95;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(12px);
-      background:rgba(255,255,255,0.88);
-      border-bottom:1px solid rgba(219,231,243,0.9);
-    }
-
-    nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      min-height:78px;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-    }
-
-    .brand-name{
-      font-family:'Montserrat',sans-serif;
-      font-size:1.35rem;
-      font-weight:800;
-      color:var(--navy);
-      letter-spacing:0.2px;
-    }
-
-    .brand-tag{
-      font-size:0.82rem;
-      color:var(--muted);
-      font-weight:600;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:24px;
-      flex-wrap:wrap;
-    }
-
-    .nav-links a{
-      color:var(--text);
-      font-weight:600;
-      font-size:0.96rem;
-      transition:0.2s ease;
-    }
-
-    .nav-links a:hover{
-      color:var(--navy);
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 22px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:0.98rem;
-      transition:0.25s ease;
-      border:none;
-      cursor:pointer;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,var(--navy),var(--blue));
-      color:var(--white);
-      box-shadow:0 14px 30px rgba(10,47,111,0.18);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:var(--white);
-      color:var(--navy);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-    }
-
-    .btn-secondary:hover{
-      transform:translateY(-2px);
-    }
-
-    .hero{
-      position:relative;
-      overflow:hidden;
-      padding:84px 0 70px;
-      background:
-        radial-gradient(circle at top right, rgba(127,211,255,0.38), transparent 28%),
-        radial-gradient(circle at left center, rgba(29,143,227,0.08), transparent 32%);
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:34px;
-      align-items:center;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#e9f4ff;
-      color:var(--navy);
-      border:1px solid #cfe5fb;
-      border-radius:999px;
-      padding:8px 14px;
-      font-size:0.85rem;
-      font-weight:800;
-      margin-bottom:18px;
-    }
-
-    h1{
-      font-family:'Montserrat',sans-serif;
-      font-size:clamp(2.3rem,5vw,4.35rem);
-      line-height:1.08;
-      color:var(--navy-dark);
-      margin-bottom:16px;
-      max-width:720px;
-    }
-
-    .hero p{
-      font-size:1.05rem;
-      color:var(--muted);
-      max-width:650px;
-      margin-bottom:26px;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:26px;
-    }
-
-    .hero-points{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .hero-points span{
-      background:var(--white);
-      border:1px solid var(--line);
-      color:var(--navy);
-      padding:10px 14px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:0.92rem;
-      box-shadow:var(--shadow);
-    }
-
-    .hero-card{
-      background:linear-gradient(180deg, #0a2f6f 0%, #114694 100%);
-      color:var(--white);
-      border-radius:28px;
-      padding:30px;
-      box-shadow:0 24px 60px rgba(10,47,111,0.22);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      background:rgba(127,211,255,0.14);
-      top:-60px;
-      right:-60px;
-    }
-
-    .hero-card small{
-      display:inline-block;
-      font-weight:800;
-      font-size:0.8rem;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      color:#bfe5ff;
-      margin-bottom:12px;
-      position:relative;
-      z-index:1;
-    }
-
-    .hero-card h3{
-      font-family:'Montserrat',sans-serif;
-      font-size:1.6rem;
-      line-height:1.2;
-      margin-bottom:16px;
-      position:relative;
-      z-index:1;
-    }
-
-    .hero-card p{
-      color:rgba(255,255,255,0.88);
-      margin-bottom:20px;
-      position:relative;
-      z-index:1;
-    }
-
-    .offer-badge{
-      display:inline-flex;
-      background:#ffffff;
-      color:var(--navy);
-      border-radius:999px;
-      padding:11px 16px;
-      font-weight:800;
-      font-size:0.92rem;
-      position:relative;
-      z-index:1;
-      margin-bottom:18px;
-    }
-
-    .service-mini{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      position:relative;
-      z-index:1;
-    }
-
-    .service-mini div{
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.14);
-      border-radius:16px;
-      padding:14px 12px;
-      text-align:center;
-      font-weight:700;
-      font-size:0.92rem;
-    }
-
-    section{
-      padding:78px 0;
-    }
-
-    .section-heading{
-      text-align:center;
-      margin-bottom:42px;
-    }
-
-    .section-heading .label{
-      display:inline-block;
-      color:var(--blue);
-      font-size:0.84rem;
-      text-transform:uppercase;
-      font-weight:800;
-      letter-spacing:1.1px;
-      margin-bottom:10px;
-    }
-
-    .section-heading h2{
-      font-family:'Montserrat',sans-serif;
-      font-size:clamp(1.8rem,4vw,2.8rem);
-      color:var(--navy-dark);
-      margin-bottom:10px;
-    }
-
-    .section-heading p{
-      color:var(--muted);
-      max-width:760px;
-      margin:0 auto;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
-
-    .card{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow:var(--shadow);
-    }
-
-    .card h3{
-      font-family:'Montserrat',sans-serif;
-      color:var(--navy);
-      font-size:1.2rem;
-      margin-bottom:10px;
-    }
-
-    .card p{
-      color:var(--muted);
-      margin-bottom:16px;
-    }
-
-    .card ul{
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-
-    .card ul li{
-      position:relative;
-      padding-left:22px;
-      color:var(--text);
-      font-weight:500;
-    }
-
-    .card ul li::before{
-      content:"✔";
-      position:absolute;
-      left:0;
-      top:0;
-      color:var(--blue);
-      font-weight:800;
-    }
-
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-    }
-
-    .why-box{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:24px;
-      box-shadow:var(--shadow);
-    }
-
-    .why-box h3{
-      color:var(--navy);
-      margin-bottom:8px;
-      font-family:'Montserrat',sans-serif;
-      font-size:1.05rem;
-    }
-
-    .why-box p{
-      color:var(--muted);
-      font-size:0.96rem;
-    }
-
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .step{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:28px;
-      box-shadow:var(--shadow);
-    }
-
-    .step-number{
-      width:46px;
-      height:46px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(135deg,var(--navy),var(--blue));
-      color:var(--white);
-      font-weight:800;
-      margin-bottom:14px;
-    }
-
-    .step h3{
-      color:var(--navy);
-      margin-bottom:8px;
-      font-family:'Montserrat',sans-serif;
-    }
-
-    .step p{
-      color:var(--muted);
-    }
-
-    .contact-wrap{
-      display:grid;
-      grid-template-columns:0.95fr 1.05fr;
-      gap:24px;
-      align-items:stretch;
-    }
-
-    .contact-card,
-    .quote-card{
-      background:var(--white);
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:30px;
-      box-shadow:var(--shadow);
-    }
-
-    .contact-card h3,
-    .quote-card h3{
-      font-family:'Montserrat',sans-serif;
-      color:var(--navy-dark);
-      font-size:1.45rem;
-      margin-bottom:10px;
-    }
-
-    .contact-card p,
-    .quote-card p{
-      color:var(--muted);
-      margin-bottom:20px;
-    }
-
-    .contact-list{
-      list-style:none;
-      display:grid;
-      gap:12px;
-      margin-bottom:22px;
-    }
-
-    .contact-list li{
-      font-weight:600;
-      color:var(--text);
-    }
-
-    .quote-features{
-      display:grid;
-      gap:12px;
-      margin-bottom:24px;
-    }
-
-    .quote-features div{
-      padding:14px 16px;
-      border-radius:14px;
-      background:#f4f9ff;
-      border:1px solid #dbeaf9;
-      color:var(--navy);
-      font-weight:700;
-    }
-
-    .quote-actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    footer{
-      background:var(--navy-dark);
-      color:rgba(255,255,255,0.88);
-      padding:24px 0;
-      text-align:center;
-      font-size:0.95rem;
-    }
-
-    @media (max-width: 1100px){
-      .hero-grid,
-      .contact-wrap,
-      .services-grid,
-      .why-grid,
-      .steps{
-        grid-template-columns:1fr;
-      }
-
-      .service-mini{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 860px){
-      nav{
-        flex-direction:column;
-        align-items:flex-start;
-        padding:16px 0;
-      }
-
-      .nav-links{
-        width:100%;
-        gap:14px;
-      }
-
-      h1{
-        font-size:2.35rem;
-      }
-
-      .hero{
-        padding-top:54px;
-      }
-    }
-
-    @media (max-width: 540px){
-      .topbar .container{
-        gap:8px;
-        flex-direction:column;
-      }
-
-      .hero-actions,
-      .quote-actions{
-        flex-direction:column;
-      }
-
-      .btn{
-        width:100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProSharpe Cleaning | Premium Cleaning Services London</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:#f5f9ff;
+  color:#1a1a1a;
+}
+
+header {
+  background:#fff;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img {
+  height:45px;
+}
+
+.logo h2 {
+  font-family:'Montserrat', sans-serif;
+  color:#0a2f6f;
+  font-size:20px;
+}
+
+.btn {
+  background:#0a2f6f;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.hero {
+  padding:80px 20px;
+  text-align:center;
+}
+
+.hero h1 {
+  font-family:'Montserrat', sans-serif;
+  font-size:40px;
+  color:#0a2f6f;
+}
+
+.hero p {
+  margin-top:15px;
+  font-size:18px;
+  color:#555;
+}
+
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services {
+  display:grid;
+  gap:20px;
+  max-width:1000px;
+  margin:40px auto;
+}
+
+.card {
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+footer {
+  background:#0a2f6f;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="topbar">
-    <div class="container">
-      <span>07762 397 938</span>
-      <span>info@prosharpecleaning.com</span>
-      <span>South West London</span>
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="ProSharpe Cleaning">
+    <h2>ProSharpe Cleaning</h2>
+  </div>
+  <a class="btn" href="https://wa.me/447821345505?text=Hi%20ProSharpe%20Cleaning%2C%20I%27d%20like%20a%20quote">WhatsApp Us</a>
+</header>
+
+<section class="hero">
+  <h1>Premium Cleaning Services in London</h1>
+  <p>End of Tenancy • Deep Cleaning • After Builders</p>
+  <br>
+  <a class="btn" href="https://wa.me/447821345505?text=Hi%20ProSharpe%20Cleaning%2C%20I%27d%20like%20a%20quote">Get a Quote on WhatsApp</a>
+</section>
+
+<section class="section">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>End of Tenancy Cleaning</h3>
+      <p>Full property cleans ready for landlords and agents.</p>
+    </div>
+
+    <div class="card">
+      <h3>Deep Cleaning</h3>
+      <p>Detailed top-to-bottom cleaning for homes.</p>
+    </div>
+
+    <div class="card">
+      <h3>After Builders Cleaning</h3>
+      <p>Post-construction cleaning leaving properties spotless.</p>
     </div>
   </div>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <div class="brand-name">ProSharpe Cleaning</div>
-          <div class="brand-tag">Reliable • Professional • Premium Finish</div>
-        </div>
+  <a class="btn" href="https://wa.me/447821345505?text=Hi%20ProSharpe%20Cleaning%2C%20I%27d%20like%20a%20quote">WhatsApp Us</a>
+</section>
 
-        <div class="nav-links">
-          <a href="#services">Services</a>
-          <a href="#why-us">Why Us</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#contact">Contact</a>
-          <a class="btn btn-primary" href="https://prosharpecleaning.simplybook.it/v2/#book" target="_blank" rel="noopener noreferrer">Get a Quote</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <p>Reliable team • Fast turnaround • High standards • South West London</p>
+</section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow">Reliable • Professional • Premium Finish</div>
-            <h1>A cleaner, sharper look for every property.</h1>
-            <p>
-              Professional cleaning services across London for tenants, landlords, homeowners and property professionals.
-              Built to look polished, trustworthy and premium from the first click.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#services">View Services</a>
-              <a class="btn btn-secondary" href="https://prosharpecleaning.simplybook.it/v2/#book" target="_blank" rel="noopener noreferrer">Request a Quote</a>
-            </div>
-
-            <div class="hero-points">
-              <span>End of Tenancy specialists</span>
-              <span>Deep cleaning available</span>
-              <span>After builders cleaning</span>
-            </div>
-          </div>
-
-          <div class="hero-card">
-            <small>Professional Cleaning Services</small>
-            <h3>Reliable & Professional Cleaning Services</h3>
-            <p>
-              Branding and layout styled to match your flyer and business card look.
-            </p>
-            <div class="offer-badge">20% OFF FOR NEW CUSTOMERS</div>
-
-            <div class="service-mini">
-              <div>End of Tenancy</div>
-              <div>Deep Clean</div>
-              <div>After Builders</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="section-heading">
-          <div class="label">Our Services</div>
-          <h2>Cleaning services that match the standard of your brand.</h2>
-          <p>
-            Focused, high-value services presented in a cleaner, stronger layout inspired by your printed marketing.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="card">
-            <h3>End of Tenancy Cleaning</h3>
-            <p>
-              Detailed move-out cleans for tenants, landlords and letting agents who need a property ready for handover.
-            </p>
-            <ul>
-              <li>Kitchen, bathroom and full-room detailing</li>
-              <li>Ideal for pre-checkout presentation</li>
-              <li>Designed for rental property standards</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Deep Cleaning</h3>
-            <p>
-              A top-to-bottom refresh for homes and properties that need more attention than a standard clean.
-            </p>
-            <ul>
-              <li>Built-up dirt and neglected area focus</li>
-              <li>Perfect for one-off reset cleans</li>
-              <li>Great before guests or special occasions</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>After Builders Cleaning</h3>
-            <p>
-              Professional post-renovation and property refresh cleans to leave spaces dust-free, sharp and ready to use.
-            </p>
-            <ul>
-              <li>Dust, residue and surface detailing</li>
-              <li>Ideal after decorating or building work</li>
-              <li>Tailored to each property condition</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-us" style="background:#f7fbff;">
-      <div class="container">
-        <div class="section-heading">
-          <div class="label">Why Choose ProSharpe</div>
-          <h2>A stronger first impression, online and offline.</h2>
-          <p>
-            This version keeps the homepage premium, simple and brand-led instead of looking cluttered or overly template-based.
-          </p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why-box">
-            <h3>Professional Branding</h3>
-            <p>The navy, blue and curved premium styling mirrors your flyer and business card design.</p>
-          </div>
-          <div class="why-box">
-            <h3>Cleaner Layout</h3>
-            <p>Less visual noise, stronger spacing and clearer sections make the site feel more premium.</p>
-          </div>
-          <div class="why-box">
-            <h3>Trust First</h3>
-            <p>Visitors see your value, services and professionalism before they are pushed into booking.</p>
-          </div>
-          <div class="why-box">
-            <h3>Built to Convert</h3>
-            <p>Clear service blocks and stronger call-to-action buttons help turn visits into enquiries.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="container">
-        <div class="section-heading">
-          <div class="label">Simple Process</div>
-          <h2>How it works</h2>
-          <p>Keep it easy for customers while still making the business look established and professional.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Choose your service</h3>
-            <p>Customers see exactly what you offer with a clean and premium service overview.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Request a quote</h3>
-            <p>They click through to your booking page and submit their enquiry directly.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Get the job booked</h3>
-            <p>You confirm the clean, keep the journey simple, and maintain the premium brand feel.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="background:#f7fbff;">
-      <div class="container">
-        <div class="contact-wrap">
-          <div class="contact-card">
-            <h3>Ready to book or ask a question?</h3>
-            <p>Use the details below for enquiries, quotes and service questions.</p>
-
-            <ul class="contact-list">
-              <li>📞 07762 397 938</li>
-              <li>✉️ info@prosharpecleaning.com</li>
-              <li>📍 South West London</li>
-            </ul>
-
-            <a class="btn btn-secondary" href="tel:07762397938">Call Now</a>
-          </div>
-
-          <div class="quote-card">
-            <h3>Get a Quick Quote</h3>
-            <p>
-              Click below to go straight to your quote / booking page.
-            </p>
-
-            <div class="quote-features">
-              <div>End of Tenancy Cleaning</div>
-              <div>Deep Cleaning</div>
-              <div>After Builders Cleaning</div>
-            </div>
-
-            <div class="quote-actions">
-              <a class="btn btn-primary" href="https://prosharpecleaning.simplybook.it/v2/#book" target="_blank" rel="noopener noreferrer">Request Quote</a>
-              <a class="btn btn-secondary" href="mailto:info@prosharpecleaning.com">Email Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      Professional Cleaning Services<br>
-      © 2026 ProSharpe Cleaning. All rights reserved.
-    </div>
-  </footer>
+<footer>
+  <p>📞 +44 7821 345505</p>
+  <p>© 2026 ProSharpe Cleaning</p>
+</footer>
 
 </body>
 </html>
